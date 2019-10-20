@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlbumChosePicViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="VmR-rn-6QI">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="523"/>
+                    <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jD5-0F-fjR">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PhJ-by-hsr">
+                    <rect key="frame" x="0.0" y="523" width="320" height="45"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUw-cf-rVA">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="0.5"/>
+                            <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="0.5" id="2wj-Jx-EMB"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbS-wN-zz2">
+                            <rect key="frame" x="225" y="5" width="85" height="34.5"/>
+                            <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="85" id="8jc-2x-CNM"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="确定(0/9)">
+                                <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="xbS-wN-zz2" secondAttribute="trailing" constant="10" id="1FD-Zu-qdL"/>
+                        <constraint firstItem="xbS-wN-zz2" firstAttribute="centerY" secondItem="PhJ-by-hsr" secondAttribute="centerY" id="7zf-J8-0cn"/>
+                        <constraint firstItem="hUw-cf-rVA" firstAttribute="top" secondItem="PhJ-by-hsr" secondAttribute="top" id="bV7-Ee-l1j"/>
+                        <constraint firstItem="xbS-wN-zz2" firstAttribute="top" secondItem="hUw-cf-rVA" secondAttribute="bottom" constant="5" id="fme-LI-UNJ"/>
+                        <constraint firstItem="hUw-cf-rVA" firstAttribute="leading" secondItem="PhJ-by-hsr" secondAttribute="leading" id="iGL-Jc-gaa"/>
+                        <constraint firstAttribute="trailing" secondItem="hUw-cf-rVA" secondAttribute="trailing" id="rKF-LR-Smx"/>
+                        <constraint firstAttribute="bottom" secondItem="xbS-wN-zz2" secondAttribute="bottom" constant="5" id="swl-nG-gDH"/>
+                        <constraint firstAttribute="height" constant="45" id="uCJ-Gj-gqX"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="VmR-rn-6QI" secondAttribute="trailing" id="CbS-Fh-n0c"/>
+                <constraint firstAttribute="bottom" secondItem="PhJ-by-hsr" secondAttribute="bottom" id="El2-hC-wg4"/>
+                <constraint firstItem="PhJ-by-hsr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="SoL-7R-LT5"/>
+                <constraint firstItem="PhJ-by-hsr" firstAttribute="top" secondItem="VmR-rn-6QI" secondAttribute="bottom" id="UbH-5h-Rva"/>
+                <constraint firstItem="VmR-rn-6QI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ZI7-Yz-SJC"/>
+                <constraint firstAttribute="trailing" secondItem="PhJ-by-hsr" secondAttribute="trailing" id="iZ7-ab-zJ8"/>
+                <constraint firstItem="VmR-rn-6QI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ySj-HL-BQi"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

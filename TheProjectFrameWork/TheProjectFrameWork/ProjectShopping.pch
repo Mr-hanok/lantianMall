@@ -1,0 +1,88 @@
+//
+//  ProjectShopping.pch
+//  TheProjectFrameWork
+//
+//  Created by maple on 16/6/3.
+//  Copyright © 2016年 MapleDongSen. All rights reserved.
+//
+
+#ifndef ProjectShopping_pch
+#define ProjectShopping_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+/**
+ * LaguageControl 国际化语言控制
+ */
+#import "LaguageControl.h"
+
+/**
+ *  用户账号管理
+ */
+#import "UserAccountManager.h"
+#import "UserModel.h"
+#import "AdvertListModel.h"
+/*
+ *Macros
+ */
+#import "ConstsHeader.h"
+#import "BaseMacros.h"
+#import "HomeVCMacros.h"
+#import "AppMacros.h"
+#import "Enumeration.h"
+#import "UrlMacros.h"
+#import "HUDManager.h"
+#import "UserNetworkMacro.h"
+#import "UIAlertView+NTESBlock.h"
+#import "UITableView+HD_NoList.h"
+#import "UICollectionView+HD_NoList.h"
+#import "NSString+Time.h"
+#import "BaseWebViewController.h"
+/**
+ *  网络请求
+ */
+#import "NetWork.h"
+/**
+ *  提示hud
+ */
+#import "HUDManager.h"
+/**
+ *  appDelegate
+ */
+#import "AppDelegate.h"
+#import "AppDelegate+PrivateMethods.h"
+
+/**
+ *  baseViewController
+ */
+#import "NavigationBarView.h"
+#import "NavigationBatTitleView.h"
+/*
+ *
+ */
+
+#import "UINavigationBar+Awesome.h"
+#import "UITabBar+badge.h"
+#import "UIButton+Badge.h"
+#import "UIBarButtonItem+Badge.h"
+#import "UIColor+NSString.h"
+#import "UILabel+Extension.h"
+#import "NSString+Calculate.h"
+#import "NSString+Validation.h"
+/*
+ * WeChat && Alipay
+ */
+
+#import "WeChatAlipay.h"
+
+/*
+ *CocoaPods
+ */
+#import "MJRefresh.h"
+#import "AFNetworking.h"
+#import "Masonry.h"
+#import "MJExtension.h"
+#import <UIImageView+WebCache.h>
+#import "NSDictionary+write.h"
+#endif
+/* ProjectShopping_pch */

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16G1114" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PopPayAttentionView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AmC-CN-Vks">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K2A-Zj-bM8">
+                    <rect key="frame" x="127.5" y="487" width="120" height="120"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fanbaijing" translatesAutoresizingMaskIntoConstraints="NO" id="fYp-L0-fDs">
+                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                        </imageView>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="LJL-gc-bzA">
+                            <rect key="frame" x="10" y="10" width="100" height="85"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="2Dg-gW-6Gu"/>
+                                <outlet property="delegate" destination="-1" id="A0y-JL-Cd2"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="2id-cG-0VD"/>
+                        <constraint firstItem="LJL-gc-bzA" firstAttribute="top" secondItem="K2A-Zj-bM8" secondAttribute="top" constant="10" id="3sD-sV-DsS"/>
+                        <constraint firstAttribute="height" constant="120" id="9Vl-yU-N8r"/>
+                        <constraint firstAttribute="bottom" secondItem="fYp-L0-fDs" secondAttribute="bottom" id="Hgl-nC-CnJ"/>
+                        <constraint firstItem="fYp-L0-fDs" firstAttribute="top" secondItem="K2A-Zj-bM8" secondAttribute="top" id="HmX-Xf-a0B"/>
+                        <constraint firstItem="LJL-gc-bzA" firstAttribute="leading" secondItem="K2A-Zj-bM8" secondAttribute="leading" constant="10" id="LoR-zj-hHo"/>
+                        <constraint firstAttribute="bottom" secondItem="LJL-gc-bzA" secondAttribute="bottom" constant="25" id="Qfd-Ar-S1Z"/>
+                        <constraint firstAttribute="trailing" secondItem="fYp-L0-fDs" secondAttribute="trailing" id="ebH-xy-F69"/>
+                        <constraint firstItem="fYp-L0-fDs" firstAttribute="leading" secondItem="K2A-Zj-bM8" secondAttribute="leading" id="fK4-L7-0gv"/>
+                        <constraint firstAttribute="trailing" secondItem="LJL-gc-bzA" secondAttribute="trailing" constant="10" id="r6u-xA-TZB"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="K2A-Zj-bM8" secondAttribute="bottom" constant="60" id="8d1-Gl-rph"/>
+                <constraint firstAttribute="bottom" secondItem="AmC-CN-Vks" secondAttribute="bottom" id="YCt-JE-V0q"/>
+                <constraint firstItem="K2A-Zj-bM8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Z1T-Jw-ALE"/>
+                <constraint firstItem="AmC-CN-Vks" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="iEC-Ob-Ft8"/>
+                <constraint firstItem="AmC-CN-Vks" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="viy-CE-doA"/>
+                <constraint firstAttribute="trailing" secondItem="AmC-CN-Vks" secondAttribute="trailing" id="xzz-gS-6g8"/>
+            </constraints>
+            <connections>
+                <outlet property="classTableView" destination="LJL-gc-bzA" id="a6L-fp-Aem"/>
+                <outlet property="contentView" destination="K2A-Zj-bM8" id="Kpj-WG-J4p"/>
+                <outlet property="tapView" destination="AmC-CN-Vks" id="PYO-n0-8u3"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="fanbaijing" width="87" height="82"/>
+    </resources>
+</document>

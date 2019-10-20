@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="203" id="KGk-i7-Jjw" customClass="GoodsImageTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="335" height="203"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="335" height="202.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="44Z-zE-M7X">
+                        <rect key="frame" x="8" y="8" width="319" height="186.5"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="44Z-zE-M7X" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="5fd-Ce-kBt"/>
+                    <constraint firstItem="44Z-zE-M7X" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="D39-gq-r8U"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="44Z-zE-M7X" secondAttribute="bottom" id="IPk-X5-Mu1"/>
+                    <constraint firstItem="44Z-zE-M7X" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="oJc-d7-8Mb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="evaluationImageView" destination="44Z-zE-M7X" id="VTZ-B6-2UW"/>
+            </connections>
+            <point key="canvasLocation" x="217.5" y="291.5"/>
+        </tableViewCell>
+    </objects>
+</document>

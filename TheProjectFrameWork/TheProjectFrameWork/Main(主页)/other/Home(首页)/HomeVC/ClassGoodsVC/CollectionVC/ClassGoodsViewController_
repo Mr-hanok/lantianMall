@@ -1,0 +1,13 @@
+//
+//  ClassGoodsViewController_NetWork.h
+//  TheProjectFrameWork
+//
+//  Created by maple on 16/8/12.
+//  Copyright © 2016年 MapleDongSen. All rights reserved.
+//
+
+#import "ClassGoodsViewController.h"
+
+@interface ClassGoodsViewController ()
+
+@end

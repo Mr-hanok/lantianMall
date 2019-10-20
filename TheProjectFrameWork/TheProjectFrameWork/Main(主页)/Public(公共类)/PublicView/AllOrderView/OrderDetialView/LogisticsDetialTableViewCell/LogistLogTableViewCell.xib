@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="76" id="KGk-i7-Jjw" customClass="LogistLogTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="323" height="76"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="323" height="75"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xvI-r5-Uy4">
+                        <rect key="frame" x="28" y="0.0" width="1" height="75"/>
+                        <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="RYo-qk-6a2"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="椭圆-1-拷贝" translatesAutoresizingMaskIntoConstraints="NO" id="9lo-Dv-poe">
+                        <rect key="frame" x="23" y="13" width="10" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="10" id="d8Z-1k-yYf"/>
+                            <constraint firstAttribute="height" constant="10" id="iar-U5-oeS"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016-07-06 16:40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2n-H4-edg">
+                        <rect key="frame" x="43" y="42.5" width="262" height="24.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="卖家已发货" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcC-6L-GBV">
+                        <rect key="frame" x="43" y="-6.5" width="262" height="49"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="29.5" id="Gkk-lk-2lv"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Gkk-lk-2lv"/>
+                            </mask>
+                        </variation>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xcC-6L-GBV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-20" id="3vl-AR-ogg"/>
+                    <constraint firstItem="E2n-H4-edg" firstAttribute="leading" secondItem="9lo-Dv-poe" secondAttribute="trailing" constant="10" id="5PR-pq-Vtw"/>
+                    <constraint firstItem="E2n-H4-edg" firstAttribute="top" secondItem="xcC-6L-GBV" secondAttribute="bottom" id="6W9-6c-wfR"/>
+                    <constraint firstItem="9lo-Dv-poe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="8Yv-vm-dh4"/>
+                    <constraint firstItem="E2n-H4-edg" firstAttribute="height" secondItem="xcC-6L-GBV" secondAttribute="height" multiplier="1:2" id="9Lp-dM-ep6"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="E2n-H4-edg" secondAttribute="trailing" constant="10" id="AHg-gP-qan"/>
+                    <constraint firstItem="xcC-6L-GBV" firstAttribute="leading" secondItem="9lo-Dv-poe" secondAttribute="trailing" constant="10" id="Bao-mJ-45D"/>
+                    <constraint firstItem="xvI-r5-Uy4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="GgF-G1-zMI"/>
+                    <constraint firstItem="xvI-r5-Uy4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="OQb-XH-Sgw"/>
+                    <constraint firstAttribute="bottom" secondItem="xvI-r5-Uy4" secondAttribute="bottom" id="Omd-UT-0kK"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="E2n-H4-edg" secondAttribute="bottom" id="YxN-xs-stX"/>
+                    <constraint firstItem="9lo-Dv-poe" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-20" id="lYl-9z-TBa"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="xcC-6L-GBV" secondAttribute="trailing" constant="10" id="lm0-Ee-UP4"/>
+                    <constraint firstItem="xvI-r5-Uy4" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ovb-CL-J1z"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contextLabel" destination="xcC-6L-GBV" id="pyf-UR-zsj"/>
+                <outlet property="timeLabel" destination="E2n-H4-edg" id="d4t-Jg-agj"/>
+            </connections>
+            <point key="canvasLocation" x="-27" y="42"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="椭圆-1-拷贝" width="10" height="10"/>
+    </resources>
+</document>

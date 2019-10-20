@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MywalletViewController">
+            <connections>
+                <outlet property="determineButton" destination="Flh-Gc-bM3" id="E6X-id-AU6"/>
+                <outlet property="freshBtn" destination="AgA-Io-JdF" id="hHq-Nz-7WI"/>
+                <outlet property="headview" destination="Y4A-HN-4x8" id="iEh-ZJ-fXv"/>
+                <outlet property="mywalletTableView" destination="gNm-md-yCS" id="YpZ-Jv-b1H"/>
+                <outlet property="tureMoneyLabel" destination="eIx-e8-cxJ" id="tRR-w2-Rxr"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="gNm-md-yCS">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <view key="tableFooterView" contentMode="scaleToFill" id="M5w-oy-64Q">
+                        <rect key="frame" x="0.0" y="896.5" width="375" height="110"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Flh-Gc-bM3">
+                                <rect key="frame" x="15" y="58" width="345" height="48"/>
+                                <color key="backgroundColor" red="0.933889678" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="q4b-YM-D4I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="去付款">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="determineButtonClicked:" destination="-1" eventType="touchUpInside" id="nlJ-Xd-1wJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="110" id="1IK-5E-40q"/>
+                            <constraint firstAttribute="trailing" secondItem="Flh-Gc-bM3" secondAttribute="trailing" constant="15" id="Ani-Zr-Ur5"/>
+                            <constraint firstItem="Flh-Gc-bM3" firstAttribute="centerX" secondItem="M5w-oy-64Q" secondAttribute="centerX" id="CGa-4a-BpC"/>
+                            <constraint firstItem="Flh-Gc-bM3" firstAttribute="leading" secondItem="M5w-oy-64Q" secondAttribute="leading" constant="15" id="Dzr-DN-B8h"/>
+                            <constraint firstAttribute="bottom" secondItem="Flh-Gc-bM3" secondAttribute="bottom" constant="4" id="ml8-h3-B90"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="0RY-zZ-qiJ"/>
+                        <outlet property="delegate" destination="-1" id="3Vd-BO-H6U"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="gNm-md-yCS" secondAttribute="bottom" id="gA6-b0-1Zo"/>
+                <constraint firstAttribute="trailing" secondItem="gNm-md-yCS" secondAttribute="trailing" id="oaM-rD-oTN"/>
+                <constraint firstItem="gNm-md-yCS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="t05-W1-9AL"/>
+                <constraint firstItem="gNm-md-yCS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="w9S-07-bbH"/>
+            </constraints>
+            <point key="canvasLocation" x="25.5" y="125.5"/>
+        </view>
+        <view contentMode="scaleToFill" id="Y4A-HN-4x8">
+            <rect key="frame" x="0.0" y="0.0" width="413" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rw-lX-OHQ">
+                    <rect key="frame" x="0.0" y="0.0" width="413" height="90"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIx-e8-cxJ">
+                            <rect key="frame" x="159" y="0.0" width="75.5" height="90"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                            <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgA-Io-JdF">
+                            <rect key="frame" x="236.5" y="23.5" width="32" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="AgA-Io-JdF" secondAttribute="height" multiplier="8:11" id="YSB-AM-yJM"/>
+                                <constraint firstAttribute="width" constant="32" id="vWh-pP-xNc"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" image="qianbaorefash">
+                                <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="refshBtnAction:" destination="-1" eventType="touchUpInside" id="GIu-fg-hRD"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="AgA-Io-JdF" firstAttribute="centerY" secondItem="eIx-e8-cxJ" secondAttribute="centerY" id="1Or-yJ-fFl"/>
+                        <constraint firstItem="eIx-e8-cxJ" firstAttribute="centerX" secondItem="5rw-lX-OHQ" secondAttribute="centerX" constant="-10" id="5ho-VT-hk6"/>
+                        <constraint firstAttribute="bottom" secondItem="eIx-e8-cxJ" secondAttribute="bottom" id="KXY-oR-Vf2"/>
+                        <constraint firstItem="eIx-e8-cxJ" firstAttribute="top" secondItem="5rw-lX-OHQ" secondAttribute="top" id="P2C-st-VMQ"/>
+                        <constraint firstItem="AgA-Io-JdF" firstAttribute="leading" secondItem="eIx-e8-cxJ" secondAttribute="trailing" constant="2" id="akl-rB-8pd"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="5rw-lX-OHQ" firstAttribute="top" secondItem="Y4A-HN-4x8" secondAttribute="top" id="0hj-WP-8Lu"/>
+                <constraint firstAttribute="bottom" secondItem="5rw-lX-OHQ" secondAttribute="bottom" constant="10" id="Bc4-3j-Fdq"/>
+                <constraint firstAttribute="trailing" secondItem="5rw-lX-OHQ" secondAttribute="trailing" id="Vza-yk-ks1"/>
+                <constraint firstItem="5rw-lX-OHQ" firstAttribute="leading" secondItem="Y4A-HN-4x8" secondAttribute="leading" id="rGV-Y1-gox"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="451.5" y="-127"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="qianbaorefash" width="16" height="22"/>
+    </resources>
+</document>

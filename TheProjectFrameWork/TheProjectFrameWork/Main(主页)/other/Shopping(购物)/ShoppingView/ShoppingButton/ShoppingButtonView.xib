@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ShoppingButtonView">
+            <rect key="frame" x="0.0" y="0.0" width="153" height="32"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数量" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTC-1H-CrU">
+                    <rect key="frame" x="62" y="1" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="QK1-yq-oGJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shuzi" translatesAutoresizingMaskIntoConstraints="NO" id="kDI-GS-QYi">
+                    <rect key="frame" x="62" y="1" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="iBB-ui-8MD"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2m-QB-tv3">
+                    <rect key="frame" x="92" y="1" width="30" height="30"/>
+                    <state key="normal" backgroundImage="jia"/>
+                    <connections>
+                        <action selector="addButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="pS1-78-wJY"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgA-xa-tkq">
+                    <rect key="frame" x="32" y="1" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44.5" id="bPv-hN-bbp"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="jian"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="bPv-hN-bbp"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="subtractButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="ElI-q0-UsK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="CTC-1H-CrU" secondAttribute="bottom" constant="1" id="3md-k8-n9v"/>
+                <constraint firstAttribute="bottom" secondItem="T2m-QB-tv3" secondAttribute="bottom" constant="1" id="451-cC-O40"/>
+                <constraint firstItem="kDI-GS-QYi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="1" id="4tZ-Y9-qf2"/>
+                <constraint firstItem="kDI-GS-QYi" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ai0-lG-ABP"/>
+                <constraint firstItem="T2m-QB-tv3" firstAttribute="leading" secondItem="CTC-1H-CrU" secondAttribute="trailing" id="CRw-Co-q2P"/>
+                <constraint firstAttribute="bottom" secondItem="kDI-GS-QYi" secondAttribute="bottom" constant="1" id="E16-du-3AK"/>
+                <constraint firstItem="CTC-1H-CrU" firstAttribute="leading" secondItem="pgA-xa-tkq" secondAttribute="trailing" id="IQn-wn-KeM"/>
+                <constraint firstItem="pgA-xa-tkq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="1" id="Lxw-bO-kXX"/>
+                <constraint firstAttribute="trailing" secondItem="T2m-QB-tv3" secondAttribute="trailing" constant="20" id="NJI-vQ-ufe"/>
+                <constraint firstItem="pgA-xa-tkq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="Pru-jN-Oap"/>
+                <constraint firstItem="CTC-1H-CrU" firstAttribute="width" secondItem="T2m-QB-tv3" secondAttribute="width" id="Sns-Wz-bYa"/>
+                <constraint firstItem="T2m-QB-tv3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="1" id="TWt-2E-WVE"/>
+                <constraint firstItem="kDI-GS-QYi" firstAttribute="width" secondItem="CTC-1H-CrU" secondAttribute="width" id="UAb-Pc-ohD"/>
+                <constraint firstItem="CTC-1H-CrU" firstAttribute="centerX" secondItem="kDI-GS-QYi" secondAttribute="centerX" id="eoA-fQ-H6H"/>
+                <constraint firstItem="T2m-QB-tv3" firstAttribute="width" secondItem="pgA-xa-tkq" secondAttribute="width" id="gXa-W5-MHo"/>
+                <constraint firstItem="kDI-GS-QYi" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ptR-by-mpi"/>
+                <constraint firstItem="kDI-GS-QYi" firstAttribute="height" secondItem="CTC-1H-CrU" secondAttribute="height" id="r0y-3l-NL1"/>
+                <constraint firstItem="CTC-1H-CrU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="1" id="xpa-E7-xbp"/>
+                <constraint firstAttribute="bottom" secondItem="pgA-xa-tkq" secondAttribute="bottom" constant="1" id="yGR-Md-B5M"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Pru-jN-Oap"/>
+                    <exclude reference="NJI-vQ-ufe"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="addButton" destination="T2m-QB-tv3" id="wlb-hF-dXo"/>
+                <outlet property="shoppingNumber" destination="CTC-1H-CrU" id="Pmo-2A-5ue"/>
+                <outlet property="subtractButton" destination="pgA-xa-tkq" id="gSm-mY-IMf"/>
+            </connections>
+            <point key="canvasLocation" x="159.5" y="-65"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="jia" width="22" height="21"/>
+        <image name="jian" width="22" height="21"/>
+        <image name="shuzi" width="36" height="21"/>
+    </resources>
+</document>

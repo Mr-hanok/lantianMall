@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16G1114" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ArefundOrderFoot">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5kO-ue-5T7">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CqU-NX-vxn">
+                            <rect key="frame" x="0.0" y="0.0" width="188" height="657"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zB1-Nc-VfZ">
+                            <rect key="frame" x="187.5" y="0.0" width="187.5" height="657"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VRN-zu-h8q">
+                            <rect key="frame" x="0.0" y="657" width="375" height="10"/>
+                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="10" id="hdv-H0-k7p"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="VRN-zu-h8q" secondAttribute="trailing" id="0pR-nP-2kc"/>
+                        <constraint firstAttribute="trailing" secondItem="zB1-Nc-VfZ" secondAttribute="trailing" id="A3c-Eo-kzL"/>
+                        <constraint firstItem="VRN-zu-h8q" firstAttribute="top" secondItem="CqU-NX-vxn" secondAttribute="bottom" id="JUV-3Q-Dxc"/>
+                        <constraint firstItem="zB1-Nc-VfZ" firstAttribute="leading" secondItem="CqU-NX-vxn" secondAttribute="trailing" id="MAf-RQ-oJq"/>
+                        <constraint firstItem="VRN-zu-h8q" firstAttribute="top" secondItem="zB1-Nc-VfZ" secondAttribute="bottom" id="VR3-xu-xJV"/>
+                        <constraint firstItem="zB1-Nc-VfZ" firstAttribute="width" secondItem="CqU-NX-vxn" secondAttribute="width" id="eg7-tq-blr"/>
+                        <constraint firstItem="CqU-NX-vxn" firstAttribute="leading" secondItem="5kO-ue-5T7" secondAttribute="leading" id="jYU-K6-LsC"/>
+                        <constraint firstAttribute="bottom" secondItem="VRN-zu-h8q" secondAttribute="bottom" id="rqY-co-Mib"/>
+                        <constraint firstItem="zB1-Nc-VfZ" firstAttribute="top" secondItem="5kO-ue-5T7" secondAttribute="top" id="sjx-TY-inQ"/>
+                        <constraint firstItem="CqU-NX-vxn" firstAttribute="top" secondItem="5kO-ue-5T7" secondAttribute="top" id="swa-ox-3Nl"/>
+                        <constraint firstItem="VRN-zu-h8q" firstAttribute="leading" secondItem="5kO-ue-5T7" secondAttribute="leading" id="tka-6g-TVV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="5kO-ue-5T7" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4mg-tB-ut7"/>
+                <constraint firstItem="5kO-ue-5T7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6ik-yH-aNB"/>
+                <constraint firstItem="5kO-ue-5T7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MQJ-8n-INg"/>
+                <constraint firstItem="5kO-ue-5T7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="UfP-ET-SEs"/>
+            </constraints>
+            <connections>
+                <outlet property="ArefundAmountLabel" destination="zB1-Nc-VfZ" id="6Bd-7A-5Wf"/>
+                <outlet property="TransactionAmountLabel" destination="CqU-NX-vxn" id="ZR6-VJ-UbM"/>
+            </connections>
+            <point key="canvasLocation" x="44.5" y="151.5"/>
+        </view>
+    </objects>
+</document>

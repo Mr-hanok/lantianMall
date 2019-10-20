@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="197" id="KGk-i7-Jjw" customClass="SerachStoreTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="429" height="197"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="429" height="196.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cJE-gL-HEP">
+                        <color key="backgroundColor" red="0.933889678" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="UPQ-5T-Zf3"/>
+                            <constraint firstAttribute="width" constant="44" id="xrv-PU-R3m"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="起点运动户外运动足球" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPs-FR-pL7">
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="33.8万人关注" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CB-TT-str">
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqT-T6-vqZ">
+                        <constraints>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="80" id="2iW-gc-kth"/>
+                        </constraints>
+                        <state key="normal" title="进店">
+                            <color key="titleColor" red="0.76807133839999997" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="comeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="FBo-Pc-dSI"/>
+                        </connections>
+                    </button>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="402-dD-iYA">
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="393" id="NcF-2E-lYz"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="hX4-TZ-gGq">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="-1" id="BJC-B8-WhE"/>
+                            <outlet property="delegate" destination="-1" id="SO6-U5-6tG"/>
+                        </connections>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="wqT-T6-vqZ" secondAttribute="trailing" constant="10" id="01S-6r-95H"/>
+                    <constraint firstItem="wqT-T6-vqZ" firstAttribute="leading" secondItem="5CB-TT-str" secondAttribute="trailing" id="2GK-Iw-6CS"/>
+                    <constraint firstAttribute="bottom" secondItem="402-dD-iYA" secondAttribute="bottom" constant="5" id="3xu-5K-ciW"/>
+                    <constraint firstItem="402-dD-iYA" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="4Mt-tL-cqT"/>
+                    <constraint firstItem="pPs-FR-pL7" firstAttribute="leading" secondItem="cJE-gL-HEP" secondAttribute="trailing" constant="10" id="J59-5G-ANA"/>
+                    <constraint firstItem="5CB-TT-str" firstAttribute="leading" secondItem="cJE-gL-HEP" secondAttribute="trailing" constant="10" id="SSl-ei-ndF"/>
+                    <constraint firstItem="pPs-FR-pL7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="TsP-sj-nmH"/>
+                    <constraint firstItem="cJE-gL-HEP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="WJe-lu-nig"/>
+                    <constraint firstItem="5CB-TT-str" firstAttribute="top" secondItem="pPs-FR-pL7" secondAttribute="bottom" id="WqG-mW-17r"/>
+                    <constraint firstItem="wqT-T6-vqZ" firstAttribute="centerY" secondItem="cJE-gL-HEP" secondAttribute="centerY" id="lg7-M3-N7B"/>
+                    <constraint firstItem="cJE-gL-HEP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="mS4-hF-27P"/>
+                    <constraint firstItem="5CB-TT-str" firstAttribute="height" secondItem="pPs-FR-pL7" secondAttribute="height" id="osW-hw-5l8"/>
+                    <constraint firstItem="wqT-T6-vqZ" firstAttribute="leading" secondItem="pPs-FR-pL7" secondAttribute="trailing" id="rUh-xi-74Q"/>
+                    <constraint firstItem="402-dD-iYA" firstAttribute="top" secondItem="cJE-gL-HEP" secondAttribute="bottom" id="vri-JA-PKy"/>
+                    <constraint firstItem="wqT-T6-vqZ" firstAttribute="height" secondItem="cJE-gL-HEP" secondAttribute="height" multiplier="2:3" id="y48-HV-U4m"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="FocusonNumberLabel" destination="5CB-TT-str" id="Kdk-Wp-pWU"/>
+                <outlet property="collectionViewWidth" destination="NcF-2E-lYz" id="PZ7-Y3-o4D"/>
+                <outlet property="comeInButton" destination="wqT-T6-vqZ" id="Gss-BP-khM"/>
+                <outlet property="goodsCollectionView" destination="402-dD-iYA" id="X72-5J-cQN"/>
+                <outlet property="storeName" destination="pPs-FR-pL7" id="UMZ-df-q1E"/>
+                <outlet property="stroeImageView" destination="cJE-gL-HEP" id="5tI-tM-Gcp"/>
+            </connections>
+            <point key="canvasLocation" x="282.5" y="136.5"/>
+        </tableViewCell>
+    </objects>
+</document>

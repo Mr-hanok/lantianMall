@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ShopTemplateCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="224" height="145"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="224" height="145"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YRA-7q-bvd">
+                        <rect key="frame" x="0.0" y="0.0" width="224" height="145"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ta8-LN-EQm">
+                        <rect key="frame" x="174" y="10" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="TKP-qK-mhJ"/>
+                            <constraint firstAttribute="width" constant="40" id="fMl-QD-hoB"/>
+                        </constraints>
+                        <state key="normal" image="skinchoose"/>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="YRA-7q-bvd" secondAttribute="bottom" id="8yb-gI-WJ0"/>
+                <constraint firstItem="YRA-7q-bvd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="F5h-0J-Xqj"/>
+                <constraint firstAttribute="trailing" secondItem="Ta8-LN-EQm" secondAttribute="trailing" constant="10" id="LEr-dG-m8Z"/>
+                <constraint firstItem="YRA-7q-bvd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Ngy-qP-MPr"/>
+                <constraint firstItem="Ta8-LN-EQm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="lq2-oj-sfd"/>
+                <constraint firstAttribute="trailing" secondItem="YRA-7q-bvd" secondAttribute="trailing" id="u1l-k5-262"/>
+            </constraints>
+            <size key="customSize" width="224" height="145"/>
+            <point key="canvasLocation" x="184" y="201.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="skinchoose" width="32" height="32"/>
+    </resources>
+</document>

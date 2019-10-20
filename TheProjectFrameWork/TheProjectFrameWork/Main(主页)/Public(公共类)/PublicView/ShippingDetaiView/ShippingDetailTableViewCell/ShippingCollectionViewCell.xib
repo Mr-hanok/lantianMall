@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ShippingCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="232" height="213"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="232" height="213"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nv7-EO-gtA">
+                        <rect key="frame" x="0.0" y="5" width="232" height="172.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="税费：12" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3d2-I2-CtU">
+                        <rect key="frame" x="0.0" y="187.5" width="232" height="20.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="9ar-Nc-1Gy"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="3d2-I2-CtU" firstAttribute="top" secondItem="nv7-EO-gtA" secondAttribute="bottom" constant="10" id="5xX-fn-SIf"/>
+                <constraint firstAttribute="trailing" secondItem="nv7-EO-gtA" secondAttribute="trailing" id="T60-aI-T9T"/>
+                <constraint firstAttribute="trailing" secondItem="3d2-I2-CtU" secondAttribute="trailing" id="TZd-A7-WFl"/>
+                <constraint firstItem="3d2-I2-CtU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Yjt-49-fRM"/>
+                <constraint firstAttribute="bottom" secondItem="3d2-I2-CtU" secondAttribute="bottom" constant="5" id="m3l-dr-Gdz"/>
+                <constraint firstItem="nv7-EO-gtA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="sz9-51-JgO"/>
+                <constraint firstItem="nv7-EO-gtA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="xqY-Zb-IYe"/>
+            </constraints>
+            <size key="customSize" width="232" height="213"/>
+            <connections>
+                <outlet property="TaxdetailsLabel" destination="3d2-I2-CtU" id="k7p-a2-EIa"/>
+                <outlet property="goodImageView" destination="nv7-EO-gtA" id="RIv-cf-mVB"/>
+            </connections>
+            <point key="canvasLocation" x="301" y="320.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

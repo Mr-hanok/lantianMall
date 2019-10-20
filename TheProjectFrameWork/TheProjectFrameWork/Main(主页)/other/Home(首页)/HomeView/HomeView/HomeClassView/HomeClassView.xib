@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HomeClassView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zdP-l9-Mao">
+                    <rect key="frame" x="0.0" y="0.0" width="321.5" height="667"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="5BM-0H-SpG">
+                            <rect key="frame" x="0.0" y="0.0" width="321.5" height="667"/>
+                            <color key="backgroundColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="l4K-vc-KHH"/>
+                                <outlet property="delegate" destination="-1" id="F8z-MV-PRI"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="5BM-0H-SpG" firstAttribute="top" secondItem="zdP-l9-Mao" secondAttribute="top" id="A0s-4W-4QM"/>
+                        <constraint firstItem="5BM-0H-SpG" firstAttribute="leading" secondItem="zdP-l9-Mao" secondAttribute="leading" id="Anv-Db-GdG"/>
+                        <constraint firstAttribute="bottom" secondItem="5BM-0H-SpG" secondAttribute="bottom" id="JZE-wk-9aa"/>
+                        <constraint firstAttribute="trailing" secondItem="5BM-0H-SpG" secondAttribute="trailing" id="Vra-Og-cE7"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h4T-sq-Z4m">
+                    <rect key="frame" x="321.5" y="0.0" width="53.5" height="667"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="zdP-l9-Mao" secondAttribute="bottom" id="5PC-AQ-rMH"/>
+                <constraint firstAttribute="trailing" secondItem="h4T-sq-Z4m" secondAttribute="trailing" id="61c-ZZ-yx6"/>
+                <constraint firstItem="h4T-sq-Z4m" firstAttribute="leading" secondItem="zdP-l9-Mao" secondAttribute="trailing" id="JEg-zd-CSR"/>
+                <constraint firstItem="zdP-l9-Mao" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="N0T-6x-Krf"/>
+                <constraint firstAttribute="trailing" secondItem="zdP-l9-Mao" secondAttribute="trailing" multiplier="5:4" id="Zit-A3-tUd"/>
+                <constraint firstItem="h4T-sq-Z4m" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hwN-Te-Eku"/>
+                <constraint firstItem="zdP-l9-Mao" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nb1-i3-32h"/>
+                <constraint firstItem="h4T-sq-Z4m" firstAttribute="width" secondItem="zdP-l9-Mao" secondAttribute="width" multiplier="1:6" id="tAf-75-iPT"/>
+                <constraint firstAttribute="bottom" secondItem="h4T-sq-Z4m" secondAttribute="bottom" id="vrl-rK-g9n"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Zit-A3-tUd"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="ContentView" destination="zdP-l9-Mao" id="Kyw-wy-cV6"/>
+                <outlet property="classTableView" destination="5BM-0H-SpG" id="0J4-Gm-Bed"/>
+                <outlet property="tapView" destination="h4T-sq-Z4m" id="5gq-Lg-btd"/>
+            </connections>
+        </view>
+    </objects>
+</document>

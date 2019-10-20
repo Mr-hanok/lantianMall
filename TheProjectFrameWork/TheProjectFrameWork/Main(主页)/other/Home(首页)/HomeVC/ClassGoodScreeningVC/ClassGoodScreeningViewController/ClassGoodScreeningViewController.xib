@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ClassGoodScreeningViewController">
+            <connections>
+                <outlet property="confirmButton" destination="b8K-Fe-z27" id="tiv-vR-slU"/>
+                <outlet property="screeningTableView" destination="g8N-If-RGc" id="LFH-Zv-x9P"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="g8N-If-RGc">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="yGI-mD-J4u"/>
+                        <outlet property="delegate" destination="-1" id="p1v-oZ-NAI"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgq-Km-jSx">
+                    <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8K-Fe-z27">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <state key="normal" title="确定">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="confirmButton:" destination="-1" eventType="touchUpInside" id="Dzb-5i-mun"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="b8K-Fe-z27" firstAttribute="leading" secondItem="hgq-Km-jSx" secondAttribute="leading" id="4Pr-0h-nC5"/>
+                        <constraint firstAttribute="height" constant="50" id="5jL-Hi-Qh7"/>
+                        <constraint firstItem="b8K-Fe-z27" firstAttribute="top" secondItem="hgq-Km-jSx" secondAttribute="top" id="NSg-j7-jmi"/>
+                        <constraint firstAttribute="trailing" secondItem="b8K-Fe-z27" secondAttribute="trailing" id="fn3-po-4dD"/>
+                        <constraint firstAttribute="bottom" secondItem="b8K-Fe-z27" secondAttribute="bottom" id="pdP-Ua-nRC"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="g8N-If-RGc" secondAttribute="bottom" id="4HT-EO-stR"/>
+                <constraint firstItem="hgq-Km-jSx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7Me-In-Uwl"/>
+                <constraint firstItem="g8N-If-RGc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9Mg-tK-bbL"/>
+                <constraint firstAttribute="trailing" secondItem="hgq-Km-jSx" secondAttribute="trailing" id="Ea4-X2-nHk"/>
+                <constraint firstItem="hgq-Km-jSx" firstAttribute="top" secondItem="g8N-If-RGc" secondAttribute="bottom" id="bTx-QW-m4I"/>
+                <constraint firstAttribute="trailing" secondItem="g8N-If-RGc" secondAttribute="trailing" id="ej2-0S-hed"/>
+                <constraint firstAttribute="bottom" secondItem="hgq-Km-jSx" secondAttribute="bottom" id="hgc-64-3Xu"/>
+                <constraint firstItem="g8N-If-RGc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rcN-Bp-D7N"/>
+                <constraint firstItem="g8N-If-RGc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="vWW-BI-qeF"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="4HT-EO-stR"/>
+                    <exclude reference="vWW-BI-qeF"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KCT-rA-Asj">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--登录-->
+        <scene sceneID="IoQ-1Y-sph">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" modalPresentationStyle="fullScreen" id="qT9-DT-RHp" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iEw-kD-KLE"/>
+                        <viewControllerLayoutGuide type="bottom" id="adu-v2-YUl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q7o-c1-6tI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="登录" id="I9r-Bs-wd1">
+                        <barButtonItem key="leftBarButtonItem" image="back_bt_7" style="done" id="DLh-xW-lvk">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="backToPresentViewController:" destination="qT9-DT-RHp" id="2ha-5h-gyr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="XV9-Zj-qsv" kind="push" identifier="registerQuick" id="t21-hA-Iko"/>
+                        <segue destination="OLy-22-bg6" kind="push" identifier="retrievePwd" id="sJp-0k-9hU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KeQ-Pg-pIY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1401" y="-93"/>
+        </scene>
+        <!--找回密码-->
+        <scene sceneID="ZOn-D5-f5l">
+            <objects>
+                <viewController id="OLy-22-bg6" customClass="RetrievePwdViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EMA-rt-5qB"/>
+                        <viewControllerLayoutGuide type="bottom" id="nDw-7i-zlo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Or9-8B-jcd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="找回密码" id="GLq-st-PHc"/>
+                    <connections>
+                        <segue destination="Nfo-NP-VZk" kind="push" identifier="findPwdOptions" id="kS5-cJ-FYp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YNj-zz-uwx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-367" y="-717"/>
+        </scene>
+        <!--Find Pwd Options View Controller-->
+        <scene sceneID="UT3-zK-A7n">
+            <objects>
+                <viewController id="Nfo-NP-VZk" customClass="FindPwdOptionsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4yt-Y2-7fc"/>
+                        <viewControllerLayoutGuide type="bottom" id="0IL-fN-n2i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VrM-7r-N3Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="J5G-XD-qMk"/>
+                    <connections>
+                        <segue destination="diP-SU-BfY" kind="push" identifier="findPassWord" id="MoP-nY-I2I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ng-QS-kLa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="341" y="-725"/>
+        </scene>
+        <!--Retrieve Pwd Next View Controller-->
+        <scene sceneID="8gC-Do-bGo">
+            <objects>
+                <viewController id="diP-SU-BfY" customClass="RetrievePwdNextViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8DF-EU-kq7"/>
+                        <viewControllerLayoutGuide type="bottom" id="gzZ-Ee-CxD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4ux-IP-dDB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QdH-E3-Il0"/>
+                    <connections>
+                        <segue destination="OHM-HN-ghA" kind="push" identifier="changePwd" id="mLY-g1-9iz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Htv-nC-S2o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1054" y="-725"/>
+        </scene>
+        <!--Change Pass Word View Controller-->
+        <scene sceneID="gDD-8P-cHM">
+            <objects>
+                <viewController id="OHM-HN-ghA" customClass="ChangePassWordViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Ci-9W-oRS"/>
+                        <viewControllerLayoutGuide type="bottom" id="9V2-rK-OKl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Aw8-pi-gSm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8b6-Tc-uhO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O8b-5m-yYY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1790" y="-725"/>
+        </scene>
+        <!--手机快速注册-->
+        <scene sceneID="CRY-im-LcR">
+            <objects>
+                <viewController id="XV9-Zj-qsv" customClass="RegisterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o7N-tE-O8d"/>
+                        <viewControllerLayoutGuide type="bottom" id="gIF-NZ-QO0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6hf-pm-jDz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="手机快速注册" id="fTm-fx-DKH"/>
+                    <connections>
+                        <segue destination="WsK-nW-IMY" kind="push" identifier="DetailedRegister" id="plW-Fs-KJo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LYb-Tt-ARp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-388" y="82"/>
+        </scene>
+        <!--Detailed Register View Controller-->
+        <scene sceneID="vJ0-5g-brK">
+            <objects>
+                <viewController id="WsK-nW-IMY" customClass="DetailedRegisterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H3k-gC-YQC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fk0-RY-MUF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="djq-zi-YhW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RBa-Ae-aOk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q5l-kJ-6JQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="82"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TuS-hj-rfJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="KCT-rA-Asj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="xob-zJ-B1D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qT9-DT-RHp" kind="relationship" relationship="rootViewController" id="a33-h1-S6f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UAe-8s-S3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2292" y="-225"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back_bt_7" width="11" height="19.5"/>
+    </resources>
+</document>

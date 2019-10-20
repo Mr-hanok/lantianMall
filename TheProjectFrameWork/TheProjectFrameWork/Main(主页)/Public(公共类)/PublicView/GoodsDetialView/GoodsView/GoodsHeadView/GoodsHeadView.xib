@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16G1036" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GoodsHeadView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sBp-ju-Nnt">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </scrollView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ct7-6Z-r8d">
+                    <rect key="frame" x="315" y="607" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="XRS-sj-itV"/>
+                        <constraint firstAttribute="width" constant="40" id="kft-Wb-Mxo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="sBp-ju-Nnt" secondAttribute="trailing" id="2jc-WY-hu9"/>
+                <constraint firstItem="sBp-ju-Nnt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9Ym-cL-Aqe"/>
+                <constraint firstAttribute="trailing" secondItem="ct7-6Z-r8d" secondAttribute="trailing" constant="20" id="JaV-DB-fcH"/>
+                <constraint firstItem="sBp-ju-Nnt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="f59-ex-gci"/>
+                <constraint firstAttribute="bottom" secondItem="ct7-6Z-r8d" secondAttribute="bottom" constant="20" id="vmm-NJ-d2j"/>
+                <constraint firstAttribute="bottom" secondItem="sBp-ju-Nnt" secondAttribute="bottom" id="zg7-w7-6fg"/>
+            </constraints>
+            <connections>
+                <outlet property="headScrollerView" destination="sBp-ju-Nnt" id="ojb-rZ-JlY"/>
+                <outlet property="pageLabel" destination="ct7-6Z-r8d" id="6hk-Pc-9UD"/>
+            </connections>
+        </view>
+    </objects>
+</document>

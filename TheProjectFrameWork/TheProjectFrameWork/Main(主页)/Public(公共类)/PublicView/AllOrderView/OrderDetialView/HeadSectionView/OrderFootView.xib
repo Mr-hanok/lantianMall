@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="OrderFootView">
+            <rect key="frame" x="0.0" y="0.0" width="589" height="226"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z1q-wG-vjz">
+                    <rect key="frame" x="0.0" y="0.0" width="589" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toR-Fa-a09">
+                            <rect key="frame" x="30" y="8" width="529" height="44"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
+                            <state key="normal" title="联系卖家" image="lianxikefu">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="9ID-1V-ee1"/>
+                        <constraint firstItem="toR-Fa-a09" firstAttribute="top" secondItem="z1q-wG-vjz" secondAttribute="top" constant="8" id="J7x-O1-JrW"/>
+                        <constraint firstItem="toR-Fa-a09" firstAttribute="leading" secondItem="z1q-wG-vjz" secondAttribute="leading" constant="30" id="Pfd-V5-AXi"/>
+                        <constraint firstAttribute="bottom" secondItem="toR-Fa-a09" secondAttribute="bottom" constant="8" id="UBI-M5-udz"/>
+                        <constraint firstAttribute="trailing" secondItem="toR-Fa-a09" secondAttribute="trailing" constant="30" id="YmZ-lL-NZo"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HMx-VP-py8">
+                    <rect key="frame" x="0.0" y="68" width="589" height="158"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuL-nP-HaI">
+                            <rect key="frame" x="10" y="0.0" width="569" height="158"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="fuL-nP-HaI" firstAttribute="leading" secondItem="HMx-VP-py8" secondAttribute="leading" constant="10" id="7L1-7Y-aou"/>
+                        <constraint firstAttribute="bottom" secondItem="fuL-nP-HaI" secondAttribute="bottom" id="GZb-im-qPS"/>
+                        <constraint firstItem="fuL-nP-HaI" firstAttribute="top" secondItem="HMx-VP-py8" secondAttribute="top" id="MxQ-ct-aPW"/>
+                        <constraint firstAttribute="trailing" secondItem="fuL-nP-HaI" secondAttribute="trailing" constant="10" id="lV5-3O-Hxh"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="z1q-wG-vjz" secondAttribute="trailing" id="LZv-jf-lGs"/>
+                <constraint firstItem="HMx-VP-py8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Qm7-RM-PUx"/>
+                <constraint firstAttribute="trailing" secondItem="HMx-VP-py8" secondAttribute="trailing" id="UGh-hB-gPv"/>
+                <constraint firstItem="HMx-VP-py8" firstAttribute="top" secondItem="z1q-wG-vjz" secondAttribute="bottom" constant="8" id="abL-SQ-y17"/>
+                <constraint firstItem="z1q-wG-vjz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cRe-J8-0IV"/>
+                <constraint firstAttribute="bottom" secondItem="HMx-VP-py8" secondAttribute="bottom" id="gNp-mg-R3W"/>
+                <constraint firstItem="z1q-wG-vjz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pgM-3h-4lg"/>
+            </constraints>
+            <connections>
+                <outlet property="contactButton" destination="toR-Fa-a09" id="qu5-e4-vqB"/>
+                <outlet property="remarkLabel" destination="fuL-nP-HaI" id="HB5-p1-ZkN"/>
+                <outlet property="remarkview" destination="HMx-VP-py8" id="nuk-3h-cg5"/>
+            </connections>
+            <point key="canvasLocation" x="145.5" y="-81"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="lianxikefu" width="16" height="16"/>
+    </resources>
+</document>

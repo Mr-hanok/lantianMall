@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ClassTitleView">
+            <rect key="frame" x="0.0" y="0.0" width="415" height="63"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Water" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORW-5g-gtL">
+                    <rect key="frame" x="20" y="0.0" width="365" height="58"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMQ-hR-Yan">
+                    <rect key="frame" x="0.0" y="0.0" width="415" height="58"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="G3f-N1-rX9"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" title="➖"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="G3f-N1-rX9"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="detialButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="yKs-1O-HPc"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IO4-Ry-OMD">
+                    <rect key="frame" x="20" y="57" width="375" height="1"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="ETl-f4-Y27"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wzj-7Q-cmk">
+                    <rect key="frame" x="385" y="27" width="10" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="jdX-dK-6v4"/>
+                        <constraint firstAttribute="width" constant="10" id="snM-Vr-chv"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="wzj-7Q-cmk" secondAttribute="trailing" constant="20" id="4Kf-Ta-AKG"/>
+                <constraint firstItem="LMQ-hR-Yan" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="CBl-32-QDF"/>
+                <constraint firstItem="ORW-5g-gtL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="COG-CE-6Qz"/>
+                <constraint firstAttribute="bottom" secondItem="ORW-5g-gtL" secondAttribute="bottom" constant="5" id="Dl6-hJ-4hN"/>
+                <constraint firstAttribute="trailing" secondItem="IO4-Ry-OMD" secondAttribute="trailing" constant="20" id="KEv-qs-Lkg"/>
+                <constraint firstItem="LMQ-hR-Yan" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="V8h-IT-akX"/>
+                <constraint firstItem="LMQ-hR-Yan" firstAttribute="leading" secondItem="ORW-5g-gtL" secondAttribute="trailing" id="VwJ-xC-F36"/>
+                <constraint firstItem="wzj-7Q-cmk" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="aQz-jQ-ap3"/>
+                <constraint firstItem="ORW-5g-gtL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="eBx-eY-bzC"/>
+                <constraint firstAttribute="trailing" secondItem="LMQ-hR-Yan" secondAttribute="trailing" id="fCh-3M-MIa"/>
+                <constraint firstAttribute="bottom" secondItem="LMQ-hR-Yan" secondAttribute="bottom" constant="5" id="kdK-f8-Pgk"/>
+                <constraint firstItem="IO4-Ry-OMD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="kvE-cE-K8t"/>
+                <constraint firstItem="wzj-7Q-cmk" firstAttribute="leading" secondItem="ORW-5g-gtL" secondAttribute="trailing" id="nV7-YR-aJs"/>
+                <constraint firstAttribute="bottom" secondItem="IO4-Ry-OMD" secondAttribute="bottom" constant="5" id="px8-gC-uth"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="VwJ-xC-F36"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="detailButton" destination="LMQ-hR-Yan" id="ryV-qk-cCC"/>
+                <outlet property="titleImageView" destination="wzj-7Q-cmk" id="WzM-55-Hsb"/>
+                <outlet property="titleName" destination="ORW-5g-gtL" id="2WI-et-MoB"/>
+            </connections>
+            <point key="canvasLocation" x="145.5" y="21.5"/>
+        </view>
+    </objects>
+</document>

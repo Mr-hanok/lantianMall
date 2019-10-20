@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="131" id="KGk-i7-Jjw" customClass="HeadTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="381" height="131"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="381" height="130.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="起点运动户外运动商城" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdB-6i-dtL">
+                        <rect key="frame" x="67.5" y="43" width="205" height="30.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="33.8万人关注" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PgQ-EO-fBf">
+                        <rect key="frame" x="67.5" y="74" width="205" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyx-ki-15l">
+                        <rect key="frame" x="273" y="48" width="100" height="34.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="lmR-0b-YN2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                        <state key="normal" title="关注" image="guanzhuxin" backgroundImage="guanzhubeijing">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="selected" title="已关注" image="yiguanzhu" backgroundImage="yiguanzhubeijing">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J1h-eQ-0ZD">
+                        <rect key="frame" x="13" y="43.5" width="45" height="45"/>
+                        <color key="backgroundColor" red="0.76807133839999997" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="bPd-LL-9Ys"/>
+                            <constraint firstAttribute="width" secondItem="J1h-eQ-0ZD" secondAttribute="height" multiplier="12:12" id="xDt-Rp-d22"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="PgQ-EO-fBf" firstAttribute="top" secondItem="rdB-6i-dtL" secondAttribute="bottom" id="3cB-YJ-5qz"/>
+                    <constraint firstItem="PgQ-EO-fBf" firstAttribute="leading" secondItem="J1h-eQ-0ZD" secondAttribute="trailing" constant="10" id="52S-v9-feu"/>
+                    <constraint firstItem="vyx-ki-15l" firstAttribute="leading" secondItem="rdB-6i-dtL" secondAttribute="trailing" id="8eT-Tf-vn4"/>
+                    <constraint firstItem="vyx-ki-15l" firstAttribute="centerY" secondItem="J1h-eQ-0ZD" secondAttribute="centerY" id="8iL-kg-kDo"/>
+                    <constraint firstItem="vyx-ki-15l" firstAttribute="height" secondItem="J1h-eQ-0ZD" secondAttribute="height" multiplier="3:4" id="9Tb-Qb-Cjc"/>
+                    <constraint firstItem="PgQ-EO-fBf" firstAttribute="height" secondItem="rdB-6i-dtL" secondAttribute="height" multiplier="1:2" id="LbX-QH-jPS"/>
+                    <constraint firstItem="PgQ-EO-fBf" firstAttribute="bottom" secondItem="J1h-eQ-0ZD" secondAttribute="bottom" id="Uql-S4-v1V"/>
+                    <constraint firstItem="J1h-eQ-0ZD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Vhc-Os-Wa2"/>
+                    <constraint firstItem="J1h-eQ-0ZD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="a2x-B3-Znh"/>
+                    <constraint firstItem="rdB-6i-dtL" firstAttribute="top" secondItem="J1h-eQ-0ZD" secondAttribute="top" id="cbO-IS-2Ps"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="vyx-ki-15l" secondAttribute="trailing" id="ex9-Xx-uHw"/>
+                    <constraint firstItem="rdB-6i-dtL" firstAttribute="leading" secondItem="J1h-eQ-0ZD" secondAttribute="trailing" constant="10" id="f7Q-AI-9F4"/>
+                    <constraint firstItem="J1h-eQ-0ZD" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1:4" id="iEV-ww-crY"/>
+                    <constraint firstItem="PgQ-EO-fBf" firstAttribute="width" secondItem="rdB-6i-dtL" secondAttribute="width" id="xfS-O5-Qyf"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="iEV-ww-crY"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="attentButton" destination="vyx-ki-15l" id="P1r-OP-Q3N"/>
+                <outlet property="attmentNumberLabel" destination="PgQ-EO-fBf" id="QgU-xA-xhH"/>
+                <outlet property="logoImageView" destination="J1h-eQ-0ZD" id="sH5-pb-a8r"/>
+                <outlet property="shopTitleLabel" destination="rdB-6i-dtL" id="e1i-bc-M3i"/>
+            </connections>
+            <point key="canvasLocation" x="188.5" y="282.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="guanzhubeijing" width="66" height="25"/>
+        <image name="guanzhuxin" width="12" height="11"/>
+        <image name="yiguanzhu" width="12" height="11"/>
+        <image name="yiguanzhubeijing" width="66" height="25"/>
+    </resources>
+</document>

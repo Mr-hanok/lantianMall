@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16G1114" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SellerOrderHeadDefaultView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="56z-0L-cbg">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6N-iC-U1y">
+                            <rect key="frame" x="246.5" y="0.0" width="118.5" height="667"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.933889678" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="订单编号：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tnd-oW-EYr">
+                            <rect key="frame" x="10" y="0.0" width="236.5" height="667"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="J6N-iC-U1y" firstAttribute="width" secondItem="Tnd-oW-EYr" secondAttribute="width" multiplier="1:2" id="6Dq-Ae-xtk"/>
+                        <constraint firstAttribute="bottom" secondItem="J6N-iC-U1y" secondAttribute="bottom" id="7gZ-kc-USE"/>
+                        <constraint firstItem="Tnd-oW-EYr" firstAttribute="leading" secondItem="56z-0L-cbg" secondAttribute="leading" constant="10" id="DGb-1j-Khw"/>
+                        <constraint firstItem="J6N-iC-U1y" firstAttribute="top" secondItem="56z-0L-cbg" secondAttribute="top" id="fKh-dF-UWA"/>
+                        <constraint firstItem="J6N-iC-U1y" firstAttribute="leading" secondItem="Tnd-oW-EYr" secondAttribute="trailing" id="ffs-Di-gMa"/>
+                        <constraint firstAttribute="bottom" secondItem="Tnd-oW-EYr" secondAttribute="bottom" id="hlL-zG-wH2"/>
+                        <constraint firstAttribute="trailing" secondItem="J6N-iC-U1y" secondAttribute="trailing" constant="10" id="vV4-YX-3Bc"/>
+                        <constraint firstItem="Tnd-oW-EYr" firstAttribute="top" secondItem="56z-0L-cbg" secondAttribute="top" id="wQQ-cO-A15"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="56z-0L-cbg" secondAttribute="trailing" id="aMS-aR-Brr"/>
+                <constraint firstItem="56z-0L-cbg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="cXp-Oh-cKx"/>
+                <constraint firstAttribute="bottom" secondItem="56z-0L-cbg" secondAttribute="bottom" id="qmp-Kt-Yzq"/>
+                <constraint firstItem="56z-0L-cbg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="zC7-9B-tpM"/>
+            </constraints>
+            <connections>
+                <outlet property="orderNumberLabel" destination="Tnd-oW-EYr" id="7P7-fX-tcD"/>
+                <outlet property="orderTypeLabel" destination="J6N-iC-U1y" id="SYn-HY-fxX"/>
+            </connections>
+        </view>
+    </objects>
+</document>

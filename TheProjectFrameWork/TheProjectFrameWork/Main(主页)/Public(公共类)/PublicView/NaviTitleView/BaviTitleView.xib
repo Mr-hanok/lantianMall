@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16G1114" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BaviTitleView">
+            <rect key="frame" x="0.0" y="0.0" width="615" height="39"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" searchBarStyle="prominent" placeholder="搜索" translatesAutoresizingMaskIntoConstraints="NO" id="dtA-B2-6fY">
+                    <rect key="frame" x="0.0" y="0.0" width="512.5" height="39"/>
+                    <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dtA-B2-6fY" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="5:6" id="H4A-WG-swc"/>
+                <constraint firstItem="dtA-B2-6fY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cO4-0c-GWq"/>
+                <constraint firstAttribute="bottom" secondItem="dtA-B2-6fY" secondAttribute="bottom" id="h3l-Qr-jQb"/>
+                <constraint firstAttribute="trailing" secondItem="dtA-B2-6fY" secondAttribute="trailing" constant="50" id="p3h-Wu-TQi"/>
+                <constraint firstItem="dtA-B2-6fY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zI4-8T-d8H"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="p3h-Wu-TQi"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="searchBar" destination="dtA-B2-6fY" id="T2a-pK-nV7"/>
+            </connections>
+            <point key="canvasLocation" x="488.5" y="-251.5"/>
+        </view>
+    </objects>
+</document>

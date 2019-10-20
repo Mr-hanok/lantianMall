@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16G1114" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GoodsEvaluationCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="184" height="79"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="184" height="79"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qi-f4-7ck">
+                        <rect key="frame" x="0.0" y="47" width="184" height="31.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSU-fW-Isd">
+                        <rect key="frame" x="0.0" y="0.0" width="184" height="47.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="0Qi-f4-7ck" firstAttribute="height" secondItem="hSU-fW-Isd" secondAttribute="height" multiplier="2:3" id="1VZ-IQ-Nfn"/>
+                <constraint firstItem="hSU-fW-Isd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="H3g-sb-cRg"/>
+                <constraint firstItem="hSU-fW-Isd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ZuV-m4-JdF"/>
+                <constraint firstAttribute="bottom" secondItem="0Qi-f4-7ck" secondAttribute="bottom" id="gS6-vm-ihe"/>
+                <constraint firstAttribute="trailing" secondItem="0Qi-f4-7ck" secondAttribute="trailing" id="mHk-Ry-hNu"/>
+                <constraint firstItem="0Qi-f4-7ck" firstAttribute="top" secondItem="hSU-fW-Isd" secondAttribute="bottom" id="ucB-Lz-AdF"/>
+                <constraint firstItem="0Qi-f4-7ck" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uv4-ZA-WnG"/>
+                <constraint firstAttribute="trailing" secondItem="hSU-fW-Isd" secondAttribute="trailing" id="znM-Q0-N4t"/>
+            </constraints>
+            <size key="customSize" width="184" height="79"/>
+            <connections>
+                <outlet property="numberLabel" destination="0Qi-f4-7ck" id="2Az-pA-Oxf"/>
+                <outlet property="titleLabel" destination="hSU-fW-Isd" id="T9J-Rl-bAe"/>
+            </connections>
+            <point key="canvasLocation" x="305" y="225.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

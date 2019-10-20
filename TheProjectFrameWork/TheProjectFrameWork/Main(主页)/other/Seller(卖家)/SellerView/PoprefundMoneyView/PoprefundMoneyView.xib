@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PoprefundMoneyView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mz4-fu-pty">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5uV-dX-MVf">
+                    <rect key="frame" x="10" y="200" width="580" height="200"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1M-cy-3YG">
+                            <rect key="frame" x="0.0" y="0.0" width="580" height="50"/>
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="AeB-1E-9MR"/>
+                            </constraints>
+                            <state key="normal" title="退款提示">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="确定退款给买家？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9Z-iw-lig">
+                            <rect key="frame" x="0.0" y="50" width="580" height="100"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="etd-vA-PXL">
+                            <rect key="frame" x="0.0" y="150" width="580" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g34-aR-kby">
+                                    <rect key="frame" x="0.0" y="0.0" width="289.5" height="50"/>
+                                    <color key="backgroundColor" red="0.94499684340000001" green="0.94499684340000001" blue="0.94499684340000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <state key="normal" title="取消">
+                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="cancelButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="nsR-DK-ReL"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAE-7g-bKc">
+                                    <rect key="frame" x="290.5" y="0.0" width="289.5" height="50"/>
+                                    <color key="backgroundColor" red="0.94499684343434343" green="0.94499684343434343" blue="0.94499684343434343" alpha="1" colorSpace="calibratedRGB"/>
+                                    <state key="normal" title="确定">
+                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="confirmButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="2hU-bO-hLZ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="bAE-7g-bKc" firstAttribute="top" secondItem="etd-vA-PXL" secondAttribute="top" id="0Q6-Og-OuH"/>
+                                <constraint firstItem="bAE-7g-bKc" firstAttribute="leading" secondItem="g34-aR-kby" secondAttribute="trailing" constant="1" id="CIs-zd-ICD"/>
+                                <constraint firstAttribute="bottom" secondItem="g34-aR-kby" secondAttribute="bottom" id="FWV-jk-2yk"/>
+                                <constraint firstAttribute="bottom" secondItem="bAE-7g-bKc" secondAttribute="bottom" id="I3V-CJ-Q5c"/>
+                                <constraint firstItem="g34-aR-kby" firstAttribute="top" secondItem="etd-vA-PXL" secondAttribute="top" id="qhD-8m-s6l"/>
+                                <constraint firstItem="bAE-7g-bKc" firstAttribute="width" secondItem="g34-aR-kby" secondAttribute="width" id="sT5-HX-f58"/>
+                                <constraint firstAttribute="trailing" secondItem="bAE-7g-bKc" secondAttribute="trailing" id="w9W-f5-PBU"/>
+                                <constraint firstItem="g34-aR-kby" firstAttribute="leading" secondItem="etd-vA-PXL" secondAttribute="leading" id="ziE-dj-b0m"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="d1M-cy-3YG" firstAttribute="centerX" secondItem="5uV-dX-MVf" secondAttribute="centerX" id="8TH-if-k77"/>
+                        <constraint firstAttribute="trailing" secondItem="etd-vA-PXL" secondAttribute="trailing" id="GKn-EN-eyU"/>
+                        <constraint firstItem="e9Z-iw-lig" firstAttribute="leading" secondItem="5uV-dX-MVf" secondAttribute="leading" id="Ng8-X0-EKc"/>
+                        <constraint firstAttribute="bottom" secondItem="etd-vA-PXL" secondAttribute="bottom" id="YlW-hA-dL9"/>
+                        <constraint firstAttribute="trailing" secondItem="etd-vA-PXL" secondAttribute="trailing" id="aFx-IA-X5U"/>
+                        <constraint firstAttribute="trailing" secondItem="e9Z-iw-lig" secondAttribute="trailing" id="fJu-yF-HMV"/>
+                        <constraint firstItem="e9Z-iw-lig" firstAttribute="top" secondItem="d1M-cy-3YG" secondAttribute="bottom" id="iAX-wT-OVM"/>
+                        <constraint firstItem="etd-vA-PXL" firstAttribute="leading" secondItem="5uV-dX-MVf" secondAttribute="leading" id="m9U-ip-odh"/>
+                        <constraint firstItem="etd-vA-PXL" firstAttribute="top" secondItem="e9Z-iw-lig" secondAttribute="bottom" id="mA7-3a-fKV"/>
+                        <constraint firstItem="d1M-cy-3YG" firstAttribute="leading" secondItem="5uV-dX-MVf" secondAttribute="leading" id="nMu-IA-4up"/>
+                        <constraint firstItem="d1M-cy-3YG" firstAttribute="top" secondItem="5uV-dX-MVf" secondAttribute="top" id="weZ-hN-vhe"/>
+                        <constraint firstItem="etd-vA-PXL" firstAttribute="height" secondItem="d1M-cy-3YG" secondAttribute="height" id="y4H-C6-9Zo"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="5uV-dX-MVf" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4Sc-aX-t61"/>
+                <constraint firstItem="5uV-dX-MVf" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="1:3" id="IQB-T6-lK6"/>
+                <constraint firstAttribute="bottom" secondItem="mz4-fu-pty" secondAttribute="bottom" id="IaQ-cj-djg"/>
+                <constraint firstAttribute="trailing" secondItem="mz4-fu-pty" secondAttribute="trailing" id="bbB-d3-kyH"/>
+                <constraint firstItem="mz4-fu-pty" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dPm-R0-ITB"/>
+                <constraint firstItem="mz4-fu-pty" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hOC-Yr-Jg8"/>
+                <constraint firstAttribute="trailing" secondItem="5uV-dX-MVf" secondAttribute="trailing" constant="10" id="qph-Lb-gye"/>
+                <constraint firstItem="5uV-dX-MVf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="ymL-Ns-2UW"/>
+            </constraints>
+            <connections>
+                <outlet property="RefundDetialButton" destination="e9Z-iw-lig" id="dTg-MF-RWa"/>
+                <outlet property="RefundtipsButton" destination="d1M-cy-3YG" id="BZj-sj-z12"/>
+                <outlet property="calcelButton" destination="g34-aR-kby" id="243-N9-NHR"/>
+                <outlet property="confirmButton" destination="bAE-7g-bKc" id="MUJ-uf-pf1"/>
+                <outlet property="contentView" destination="5uV-dX-MVf" id="Nk0-MJ-NG7"/>
+            </connections>
+        </view>
+    </objects>
+</document>

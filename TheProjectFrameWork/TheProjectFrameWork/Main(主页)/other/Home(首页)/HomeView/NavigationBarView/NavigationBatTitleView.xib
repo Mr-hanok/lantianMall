@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NavigationBatTitleView">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="47"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="center" searchBarStyle="prominent" placeholder="搜索" translatesAutoresizingMaskIntoConstraints="NO" id="8K8-M7-08F">
+                    <rect key="frame" x="0.0" y="5" width="316" height="37"/>
+                    <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZE-5I-YVV">
+                    <rect key="frame" x="316" y="3.5" width="44" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="56u-RZ-gr0"/>
+                        <constraint firstAttribute="width" constant="44" id="ych-VB-ykt"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="8K8-M7-08F" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="BHa-6W-O32"/>
+                <constraint firstItem="KZE-5I-YVV" firstAttribute="leading" secondItem="8K8-M7-08F" secondAttribute="trailing" id="CE1-uo-AA2"/>
+                <constraint firstAttribute="trailing" secondItem="KZE-5I-YVV" secondAttribute="trailing" id="KBv-On-yQf"/>
+                <constraint firstItem="8K8-M7-08F" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="OwT-2l-aEO"/>
+                <constraint firstItem="8K8-M7-08F" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Oyo-zP-bbM"/>
+                <constraint firstItem="KZE-5I-YVV" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="yp2-pk-nDr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="buttonWidth" destination="ych-VB-ykt" id="BRe-ct-hUB"/>
+                <outlet property="rightButton" destination="KZE-5I-YVV" id="xUr-SS-ZXA"/>
+                <outlet property="searchBar" destination="8K8-M7-08F" id="qUV-pR-Kh9"/>
+            </connections>
+            <point key="canvasLocation" x="179" y="-66.5"/>
+        </view>
+    </objects>
+</document>

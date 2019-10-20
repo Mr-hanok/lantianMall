@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PopMoreView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AHx-JP-3rz">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hv4-FT-hej">
+                            <rect key="frame" x="10" y="269" width="80" height="80"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oeI-RU-2bh">
+                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vd-t7-G0I">
+                                    <rect key="frame" x="0.0" y="10" width="80" height="30"/>
+                                    <state key="normal" title="联系卖家">
+                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="connectSeller:" destination="iN0-l3-epB" eventType="touchUpInside" id="JCb-UQ-joG"/>
+                                    </connections>
+                                </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dee-p4-WPk">
+                                    <rect key="frame" x="1" y="40" width="78" height="1"/>
+                                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="XAe-gx-2nP"/>
+                                    </constraints>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eR9-xV-is5">
+                                    <rect key="frame" x="0.0" y="41" width="80" height="29"/>
+                                    <state key="normal" title="投诉">
+                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="ComplaintsButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="vUi-cq-H3r"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="2Vd-t7-G0I" firstAttribute="leading" secondItem="Hv4-FT-hej" secondAttribute="leading" id="1Jg-4U-0Gc"/>
+                                <constraint firstItem="eR9-xV-is5" firstAttribute="top" secondItem="dee-p4-WPk" secondAttribute="bottom" id="1hl-Uh-vbO"/>
+                                <constraint firstAttribute="trailing" secondItem="eR9-xV-is5" secondAttribute="trailing" id="Ad0-3p-hKg"/>
+                                <constraint firstAttribute="trailing" secondItem="2Vd-t7-G0I" secondAttribute="trailing" id="Aln-8d-Ids"/>
+                                <constraint firstAttribute="trailing" secondItem="dee-p4-WPk" secondAttribute="trailing" constant="1" id="BsE-F0-2WO"/>
+                                <constraint firstAttribute="height" constant="80" id="JHd-Bc-yMU"/>
+                                <constraint firstItem="2Vd-t7-G0I" firstAttribute="top" secondItem="Hv4-FT-hej" secondAttribute="top" constant="10" id="KLi-Qg-0uX"/>
+                                <constraint firstAttribute="bottom" secondItem="eR9-xV-is5" secondAttribute="bottom" constant="10" id="LZH-9O-97N"/>
+                                <constraint firstItem="eR9-xV-is5" firstAttribute="height" secondItem="2Vd-t7-G0I" secondAttribute="height" id="Li2-D2-QJf"/>
+                                <constraint firstAttribute="bottom" secondItem="oeI-RU-2bh" secondAttribute="bottom" id="VZX-Hg-GkN"/>
+                                <constraint firstAttribute="width" constant="80" id="dTK-1M-Nqn"/>
+                                <constraint firstItem="dee-p4-WPk" firstAttribute="leading" secondItem="Hv4-FT-hej" secondAttribute="leading" constant="1" id="gWO-cP-Vlf"/>
+                                <constraint firstItem="eR9-xV-is5" firstAttribute="top" secondItem="2Vd-t7-G0I" secondAttribute="bottom" constant="1" id="jhj-eJ-sNJ"/>
+                                <constraint firstItem="oeI-RU-2bh" firstAttribute="leading" secondItem="Hv4-FT-hej" secondAttribute="leading" id="kCq-0Q-rLk"/>
+                                <constraint firstAttribute="trailing" secondItem="oeI-RU-2bh" secondAttribute="trailing" id="lag-Ie-YZa"/>
+                                <constraint firstItem="oeI-RU-2bh" firstAttribute="top" secondItem="Hv4-FT-hej" secondAttribute="top" id="vs1-SE-LBh"/>
+                                <constraint firstItem="eR9-xV-is5" firstAttribute="leading" secondItem="Hv4-FT-hej" secondAttribute="leading" id="z60-YS-C3S"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Hv4-FT-hej" firstAttribute="leading" secondItem="AHx-JP-3rz" secondAttribute="leading" constant="10" id="VjB-2v-hmh"/>
+                        <constraint firstItem="Hv4-FT-hej" firstAttribute="top" secondItem="AHx-JP-3rz" secondAttribute="top" constant="269" id="Zzb-vi-6o9"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="AHx-JP-3rz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kNW-4H-JZX"/>
+                <constraint firstAttribute="trailing" secondItem="AHx-JP-3rz" secondAttribute="trailing" id="wjr-PV-3DE"/>
+                <constraint firstItem="AHx-JP-3rz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="yB6-BT-xrx"/>
+                <constraint firstAttribute="bottom" secondItem="AHx-JP-3rz" secondAttribute="bottom" id="yYh-cV-yc9"/>
+            </constraints>
+            <connections>
+                <outlet property="ContactthesellerButton" destination="2Vd-t7-G0I" id="Mta-bR-OeK"/>
+                <outlet property="backGroundImageView" destination="oeI-RU-2bh" id="Z00-zd-B20"/>
+                <outlet property="backToBottom" destination="VZX-Hg-GkN" id="aiM-R2-ZaO"/>
+                <outlet property="backToTop" destination="vs1-SE-LBh" id="Ihf-LV-bfK"/>
+                <outlet property="complaintsButton" destination="eR9-xV-is5" id="bUu-Tz-ylR"/>
+                <outlet property="contentView" destination="Hv4-FT-hej" id="uaH-gh-5Xq"/>
+                <outlet property="heightToTop" destination="Zzb-vi-6o9" id="FaL-zD-CQi"/>
+                <outlet property="tapView" destination="AHx-JP-3rz" id="HXa-Sv-v8p"/>
+            </connections>
+        </view>
+    </objects>
+</document>

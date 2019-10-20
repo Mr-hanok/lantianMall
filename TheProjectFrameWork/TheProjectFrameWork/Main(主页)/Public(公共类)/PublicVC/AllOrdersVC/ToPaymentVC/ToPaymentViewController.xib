@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ToPaymentViewController">
+            <connections>
+                <outlet property="paymentTabelView" destination="YVv-ob-JmS" id="9RX-8O-uQw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="YVv-ob-JmS">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="sQ5-G0-5YU"/>
+                        <outlet property="delegate" destination="-1" id="GaG-sS-xE9"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="YVv-ob-JmS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6B4-lJ-Z6j"/>
+                <constraint firstItem="YVv-ob-JmS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Kzk-sa-T4i"/>
+                <constraint firstAttribute="trailing" secondItem="YVv-ob-JmS" secondAttribute="trailing" id="ahN-6p-Oms"/>
+                <constraint firstAttribute="bottom" secondItem="YVv-ob-JmS" secondAttribute="bottom" id="jgK-c9-5VJ"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="121" id="KGk-i7-Jjw" customClass="PopNumberTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="363" height="121"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="363" height="120.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGA-Sc-9oo">
+                        <rect key="frame" x="8" y="8" width="218.5" height="104"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Gm-Ff-9fB">
+                        <rect key="frame" x="226" y="45.5" width="109" height="30"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="115.5" id="SNG-Vp-XXo"/>
+                            <constraint firstAttribute="height" constant="30" id="jMg-zy-LSn"/>
+                            <constraint firstAttribute="width" constant="100" id="zEz-Y3-Tte"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="SNG-Vp-XXo"/>
+                                <exclude reference="zEz-Y3-Tte"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="NGA-Sc-9oo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="2OE-2r-eVD"/>
+                    <constraint firstItem="NGA-Sc-9oo" firstAttribute="width" secondItem="9Gm-Ff-9fB" secondAttribute="width" multiplier="2:1" id="9ix-De-gwY"/>
+                    <constraint firstItem="9Gm-Ff-9fB" firstAttribute="leading" secondItem="NGA-Sc-9oo" secondAttribute="trailing" id="Bg7-En-Dfo"/>
+                    <constraint firstItem="NGA-Sc-9oo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Ndr-EY-76s"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="NGA-Sc-9oo" secondAttribute="bottom" id="auR-fQ-zkd"/>
+                    <constraint firstItem="9Gm-Ff-9fB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="e69-cA-FAp"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="9Gm-Ff-9fB" secondAttribute="trailing" constant="20" id="vAn-4R-jOm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="goodNameLabel" destination="NGA-Sc-9oo" id="x41-Vq-IVl"/>
+                <outlet property="goodsNumberView" destination="9Gm-Ff-9fB" id="9MI-X6-aY0"/>
+            </connections>
+            <point key="canvasLocation" x="231.5" y="328.5"/>
+        </tableViewCell>
+    </objects>
+</document>
