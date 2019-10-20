@@ -66,22 +66,32 @@
         [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
     }else{
         //[self.h5Token isEqualToString:@""]||self.h5Token == nil
-        WeakSelf(self);
-        [HUDManager showLoadingHUDView:self.view];
-        [NetWork getH5TokenCompletion:^(NSString *tips, NSError *error, NSString *token) {
+       NSString *temtoken =  [[NSUserDefaults standardUserDefaults] objectForKey: @"kDefaultH5Token"];
+        if (temtoken.length && ![temtoken isEqualToString:@"temp"]) {
+            self.h5Token = temtoken?:@"temp";
+
+            self.webUrl = [self loadRequestWithToken:temtoken?:@"temp" urlString:self.webUrl];
             
-            if (error) {
-                self.webView.hidden = YES;
-            }else{
-                self.webView.hidden = NO;
-                weakSelf.h5Token = token?:@"temp";
-                [[NSUserDefaults standardUserDefaults] setObject:token?:@"temp" forKey:@"kDefaultH5Token"];
-                [[NSUserDefaults standardUserDefaults]synchronize];
+        }else{
+            WeakSelf(self);
+            [HUDManager showLoadingHUDView:self.view];
+            [NetWork getH5TokenCompletion:^(NSString *tips, NSError *error, NSString *token) {
                 
-                weakSelf.webUrl = [weakSelf loadRequestWithToken:token?:@"temp" urlString:weakSelf.webUrl];
-            }
-            
-        }];
+                if (error) {
+                    self.webView.hidden = YES;
+                }else{
+                    self.webView.hidden = NO;
+                    weakSelf.h5Token = token?:@"temp";
+                    [[NSUserDefaults standardUserDefaults] setObject:token?:@"temp" forKey:@"kDefaultH5Token"];
+                    [[NSUserDefaults standardUserDefaults]synchronize];
+                    
+                    weakSelf.webUrl = [weakSelf loadRequestWithToken:token?:@"temp" urlString:weakSelf.webUrl];
+                }
+                
+            }];
+
+        }
+
         
     }
 }
@@ -471,7 +481,11 @@
         tempTokenstr = [NSString stringWithFormat:@"&userToken=%@",@""];
         
     }else{
-        tempTokenstr = [NSString stringWithFormat:@"&userToken=%@",token];
+        if ([token isEqualToString:@"temp"]) {
+            tempTokenstr = [NSString stringWithFormat:@"&userToken=%@",@""];
+        }else{
+            tempTokenstr = [NSString stringWithFormat:@"&userToken=%@",token];
+        }
     }
     if ([urlStr containsString:@"?"]) {
         
