@@ -45,7 +45,7 @@ DEPENDENCIES:
   - SDWebImage
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - GTSDK
     - IQKeyboardManager
@@ -71,4 +71,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 65f8d50144088bb6fde187badb5d0665db46c15e
 
-COCOAPODS: 1.6.2
+COCOAPODS: 1.8.4

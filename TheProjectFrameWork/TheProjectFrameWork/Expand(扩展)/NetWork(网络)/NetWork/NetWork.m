@@ -349,7 +349,7 @@ ImageCompletionWithFinishedBlock:(ImageCompletionWithFinishedBlock)completionBlo
 }
 + (void)getH5TokenCompletion:(void (^)(NSString *tips, NSError *error,NSString *token))completion{
     
-    [NetWork PostNetWorkWithUrl:@"/get_h5token" with:@{@"userId":kUserId} successBlock:^(NSDictionary *dic) {
+    [NetWork PostNetWorkWithUrl:@"/get_apptoken" with:@{@"userId":kUserId} successBlock:^(NSDictionary *dic) {
         NSString *token = dic[@"data"]?:@"";
         completion(dic[@"message"]?:@"", nil,token);
 

@@ -61,7 +61,7 @@
 - (void)firtLoadWebView{
 //    self.webUrl = @"http://www.baidu.com";
     /**包涵token 直接加载 否则拼接上*/
-    if ([self.webUrl containsString:@"userToken="]|| [self.webUrl containsString:@"/mobile/doc_agree"]) {
+    if ([self.webUrl containsString:@"appToken="]|| [self.webUrl containsString:@"/mobile/doc_agree"]) {
         NSURL *url = [NSURL URLWithString:self.webUrl];
         [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
     }else{
@@ -127,7 +127,7 @@
         [[UserAccountManager shareUserAccountManager] logout];
         [self clearWebViewMemary];
         NSString *temprooturl = [[KAppRootUrl componentsSeparatedByString:@"/mobile"] firstObject];
-        self.webUrl = [NSString stringWithFormat:@"%@%@",temprooturl,@"/phoneh5_zh/index.html?&userToken="];
+        self.webUrl = [NSString stringWithFormat:@"%@%@",temprooturl,@"/phoneh5_zh/index.html?&appToken="];
         [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"kDefaultH5Token"];
         [[NSUserDefaults standardUserDefaults]synchronize];
         self.tempUrlStr = nil;
@@ -255,6 +255,7 @@
     }else{
         self.rightBackbtn.hidden = YES;
     }
+    NSLog(@"%@",scheme);
     /**token过期后 请求token 拼接上*/
     if ([scheme containsString:@"/tj/token/invalid1"]) {
         decisionHandler(WKNavigationActionPolicyCancel);
@@ -281,11 +282,11 @@
             return;
         }
        
-        if ([scheme containsString:@"&userToken="]) {
-            NSString *schemeUrl = [[scheme componentsSeparatedByString:@"&userToken="] firstObject];
-//            NSString *temurl = [[self.tempUrlStr componentsSeparatedByString:@"&userToken="] firstObject];
+        if ([scheme containsString:@"&appToken="]) {
+            NSString *schemeUrl = [[scheme componentsSeparatedByString:@"&appToken="] firstObject];
+//            NSString *temurl = [[self.tempUrlStr componentsSeparatedByString:@"&appToken="] firstObject];
             
-            if ([scheme containsString:@"&userToken=temp"]&&[self.tempUrlStr containsString:schemeUrl]&&![self.tempUrlStr containsString:@"&userToken=temp"]) {
+            if ([scheme containsString:@"&appToken=temp"]&&[self.tempUrlStr containsString:schemeUrl]&&![self.tempUrlStr containsString:@"&appToken=temp"]) {
                 [self backToPresentViewController];
 //                decisionHandler(WKNavigationActionPolicyCancel);
             }else{
@@ -475,22 +476,22 @@
 - (NSString *)loadRequestWithToken:(NSString *)token urlString:(NSString *)urlStr
 {
     
-    NSString *tempTokenstr = [NSString stringWithFormat:@"&userToken=%@",token];
+    NSString *tempTokenstr = [NSString stringWithFormat:@"&appToken=%@",token];
     if (![UserAccountManager shareUserAccountManager].loginStatus  ) {
         
-        tempTokenstr = [NSString stringWithFormat:@"&userToken=%@",@""];
+        tempTokenstr = [NSString stringWithFormat:@"&appToken=%@",@""];
         
     }else{
         if ([token isEqualToString:@"temp"]) {
-            tempTokenstr = [NSString stringWithFormat:@"&userToken=%@",@""];
+            tempTokenstr = [NSString stringWithFormat:@"&appToken=%@",@""];
         }else{
-            tempTokenstr = [NSString stringWithFormat:@"&userToken=%@",token];
+            tempTokenstr = [NSString stringWithFormat:@"&appToken=%@",token];
         }
     }
     if ([urlStr containsString:@"?"]) {
         
-        if ([urlStr containsString:@"userToken="]) {
-            NSArray *temparray = [urlStr componentsSeparatedByString:@"userToken="];
+        if ([urlStr containsString:@"appToken="]) {
+            NSArray *temparray = [urlStr componentsSeparatedByString:@"appToken="];
             NSString *laststr = [temparray lastObject];
             NSString *ttoken = [[laststr componentsSeparatedByString:@"&"] firstObject];
             if ([ttoken isEqualToString:@""]) {
