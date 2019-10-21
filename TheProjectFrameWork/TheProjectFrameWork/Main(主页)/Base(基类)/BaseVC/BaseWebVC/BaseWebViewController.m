@@ -496,9 +496,11 @@
             NSString *ttoken = [[laststr componentsSeparatedByString:@"&"] firstObject];
             if ([ttoken isEqualToString:@""]) {
                 urlStr = [urlStr stringByAppendingString:token?:@""];
+                urlStr = [NSString stringWithFormat:@"%@%@%@",temparray.firstObject,token,laststr];
             }else{
                 urlStr = [urlStr stringByReplacingOccurrencesOfString:ttoken withString:token];
             }
+//            urlStr = [urlStr stringByReplacingOccurrencesOfString:ttoken withString:token];
             
         }else{
             urlStr = [NSString stringWithFormat:@"%@%@",urlStr,tempTokenstr];
@@ -507,7 +509,9 @@
     }else{
         urlStr = [NSString stringWithFormat:@"%@?%@",urlStr,tempTokenstr];
     }
-    
+    if (![urlStr containsString:@"source=ios"]) {
+        urlStr = [NSString stringWithFormat:@"%@&source=ios",urlStr];
+    }
     NSURL *url = [NSURL URLWithString:urlStr];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     [self.webView loadRequest:request];
