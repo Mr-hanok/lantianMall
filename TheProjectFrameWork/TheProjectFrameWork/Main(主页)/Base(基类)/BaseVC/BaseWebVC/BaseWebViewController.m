@@ -257,16 +257,21 @@
     }
     NSLog(@"%@",scheme);
     /**token过期后 请求token 拼接上*/
-    if ([scheme containsString:@"/tj/token/invalid1"]) {
+    if ([scheme containsString:@"//tj/token/invalid_2"]) {
         decisionHandler(WKNavigationActionPolicyCancel);
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"当前角色无操作权限" preferredStyle:UIAlertControllerStyleAlert];
+        NSString *temms = [[scheme componentsSeparatedByString:@"?msg="]lastObject];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:temms?:@"当前角色无操作权限" preferredStyle:UIAlertControllerStyleAlert];
         [alertController addAction:([UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
 
         }])];
         [self presentViewController:alertController animated:YES completion:nil];
 
         
-    }else if ([scheme containsString:@"/tj/token/invalid"] || [scheme containsString:@"loginPage.do"]|| [scheme containsString:@"Appsia_login.html"]) {
+    }else if ([scheme containsString:@"/tj/token/invalid_1"]){
+        decisionHandler(WKNavigationActionPolicyCancel);
+        [self handleInvalidTokenAction];
+    }
+    else if ([scheme containsString:@"/tj/token/invalid"] || [scheme containsString:@"loginPage.do"]|| [scheme containsString:@"Appsia_login.html"]) {
         decisionHandler(WKNavigationActionPolicyCancel);
         [self loginJump];
         return;
@@ -519,7 +524,7 @@
     
 }
 - (void )loginJump{
-    if(![UserAccountManager shareUserAccountManager].loginStatus){
+//    if(![UserAccountManager shareUserAccountManager].loginStatus){
         if (self.isLogining) {
             return;
         }
@@ -551,10 +556,9 @@
             }
         }];
         
-    }else{
-        [self handleInvalidTokenAction];
-//        decisionHandler(WKNavigationActionPolicyCancel);
-    }
+//    }else{
+//        [self handleInvalidTokenAction];
+//    }
 }
 
 - (BOOL)nativeJump:(NSString *)scheme decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler{

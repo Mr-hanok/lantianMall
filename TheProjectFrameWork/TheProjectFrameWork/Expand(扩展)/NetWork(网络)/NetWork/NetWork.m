@@ -58,6 +58,7 @@
 //        errorblock(@"没有网络");
 //        return;
 //    }
+   
     //接口拼接
     NSString * postUrl = [NSString stringWithFormat:@"%@%@",KAppRootUrl,url];
     //接口空字符去掉
@@ -71,8 +72,19 @@
     //设置请求头
     [NetWork setHttpBody:manager.requestSerializer];
     [manager.responseSerializer setAcceptableContentTypes: [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/css", @"text/plain", nil]];
+    
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:(NSDictionary *)data];
+       if ([params.allKeys containsObject:@"userId"]||[params.allKeys containsObject:@"user_id"]) {
+           if ([postReplaceUrls containsString:@"mobile/getPwSalt"]||[postReplaceUrls containsString:@"buyer/validation_phone"]||[postReplaceUrls containsString:@"mbuyer/findPassword"]||[postReplaceUrls containsString:@"/logout"]) {
+               
+           }else{
+               NSString *temtoken =  [[NSUserDefaults standardUserDefaults] objectForKey: @"kDefaultH5Token"];
+               [params setValue:temtoken?:@"" forKey:@"appToken"];
+
+           }
+       }
     // 请求
-    [manager POST:postReplaceUrls parameters:data success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+    [manager POST:postReplaceUrls parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         // 获取的数据传回去
         
         NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
@@ -93,6 +105,7 @@
         errorblock(@"没有网络");
         return;
     }
+
     //接口拼接
     NSString * postUrl = [NSString stringWithFormat:@"%@%@",KAppRootUrl,url];
     //接口空字符去掉
@@ -109,9 +122,19 @@
     //设置请求头
     [NetWork setHttpBody:manager.requestSerializer];
     [manager.responseSerializer setAcceptableContentTypes: [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/css", @"text/plain", nil]];
-    
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:(NSDictionary *)data];
+    if ([params.allKeys containsObject:@"userId"]||[params.allKeys containsObject:@"user_id"]) {
+        if ([postReplaceUrls containsString:@"mobile/getPwSalt"]||[postReplaceUrls containsString:@"buyer/validation_phone"]||[postReplaceUrls containsString:@"mbuyer/findPassword"]||[postReplaceUrls containsString:@"/logout"]) {
+            
+        }else{
+            NSString *temtoken =  [[NSUserDefaults standardUserDefaults] objectForKey: @"kDefaultH5Token"];
+            [params setValue:temtoken?:@"" forKey:@"appToken"];
+
+        }
+    }
+
     // 请求
-    [manager POST:postReplaceUrls parameters:data  success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+    [manager POST:postReplaceUrls parameters:params  success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         NSError * error = nil;
         NSDictionary * content = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:&error];
         [HUDManager hideHUDView];

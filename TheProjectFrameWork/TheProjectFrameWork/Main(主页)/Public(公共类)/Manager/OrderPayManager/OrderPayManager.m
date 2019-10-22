@@ -75,7 +75,10 @@
          [HUDManager hideHUDView];
          if ([dic[@"status"] boolValue])
          {
-             
+             if ([dic[@"data"] isKindOfClass:[NSNull class]]) {
+                 block(YES,@"",type,@"",@"",dic[@"message"]);
+                 return ;
+             }
              NSString * type22 = [NSString stringWithFormat:@"%@",dic[@"data"][@"payType"]];
              NSString * urls = [NSString stringWithFormat:@"%@",dic[@"data"][@"payUrl"]];
              NSString * price = [NSString stringWithFormat:@"%@",dic[@"data"][@"price"]];
