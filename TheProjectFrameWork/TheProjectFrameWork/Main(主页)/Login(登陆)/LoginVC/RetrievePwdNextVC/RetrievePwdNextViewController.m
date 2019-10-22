@@ -64,7 +64,11 @@
     [self.view addSubview:_contactService];
     _promptLabel.text = [NSString stringWithFormat:@"%@%@",LaguageControl(@"验证码已发送到"),_type==1?_user.email:[NSString hidePhone:_user.mobile]];
     _promptLabel.numberOfLines = 0;
-    _userLabel.text = [NSString stringWithFormat:@"%@ : %@",LaguageControl(@"账户"),_user.username];
+    if (_user.username) {
+        _userLabel.text = [NSString stringWithFormat:@"%@ : %@",LaguageControl(@"账户"),_user.username];
+    }else{
+        _userLabel.text =@"";
+    }
     [_countDownButton startTimer];
 }
 

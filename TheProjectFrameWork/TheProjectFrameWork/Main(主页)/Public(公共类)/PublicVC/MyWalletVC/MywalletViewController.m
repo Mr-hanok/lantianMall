@@ -57,6 +57,12 @@ static NSString * PayTypecellIdentifier = @"MyWalletPayTypeTableViewCell";
     self.title = @"支付方式";
     self.dataArray = [NSMutableArray array];
     [HUDManager showLoadingHUDView:self.view];
+    [[UserAccountManager shareUserAccountManager] getUserInfoComplete:^(id error, BOOL successful)
+     {
+         [HUDManager hideHUDView];
+         if (successful) [self.mywalletTableView reloadData];
+     }];
+
     [NetWork PostNetWorkWithUrl:@"/getConfig" with:nil successBlock:^(NSDictionary *dic) {
         [HUDManager hideHUDView];
         NSArray *temparray = [PayTypeModel mj_objectArrayWithKeyValuesArray:dic[@"data"][@"payType"]];

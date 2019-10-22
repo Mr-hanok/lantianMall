@@ -144,7 +144,7 @@
 
 - (IBAction)reloadAction:(UIButton *)sender {
     
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.tempUrlStr]]];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.tempUrlStr?:self.webUrl]]];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
