@@ -57,8 +57,8 @@
 #define kMutButtonSelectGrayColor [UIColor colorWithString:@"#DCDCDD"]//浅灰色
 #define kNavigationBackColor  [UIColor colorWithRed:246/255.0 green:246/255.0 blue:246/255.0 alpha:1.f]
 
-#define kNavigationColor       [UIColor colorWithString:@"#1B80E7"]
-#define kNavigationCGColor     [UIColor colorWithString:@"#1B80E7"].CGColor
+#define kNavigationColor       [UIColor colorWithString:@"#EF7432"]
+#define kNavigationCGColor     [UIColor colorWithString:@"#EF7432"].CGColor
 
 #define KSCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define KSCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
