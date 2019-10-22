@@ -54,7 +54,7 @@
     [self ProjectSetRootViewController];
     
     //向微信注册
-    [WXApi registerApp:ShareWeChatAppKey withDescription:@"蓝天MALL"];
+    [WXApi registerApp:ShareWeChatAppKey withDescription:@"海品乐购"];
     
 //    // 通过个推平台分配的appId、 appKey 、appSecret 启动SDK，注：该方法需要在主线程中调用
 //    [GeTuiSdk startSdkWithAppId:kGtAppId appKey:kGtAppKey appSecret:kGtAppSecret delegate:self];

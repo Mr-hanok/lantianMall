@@ -192,6 +192,7 @@
          if ([dic[@"status"] boolValue])
          {
              NSString * string = [NSString stringWithFormat:@"%@",dic[@"data"]];
+             
              if ([string isEqualToString:@"0"])
              {
                  block(NO,string,@"NOPayPassWord");
@@ -202,12 +203,20 @@
              }
              else
              {
-                 block(NO,string,@"");
+                 if ( [UserAccountManager shareUserAccountManager].userModel.isPayPassWord) {
+                     block(YES,string,@"");
+                 }else{
+                     block(NO,string,@"");
+                 }
              }
          }
          else
          {
-             block(NO,@"",dic[@"message"]);
+             if ( [UserAccountManager shareUserAccountManager].userModel.isPayPassWord) {
+                 block(YES,@"",@"");
+             }else{
+                 block(NO,@"",dic[@"message"]);
+             }
          }
      } errorBlock:^(NSString *error)
      {

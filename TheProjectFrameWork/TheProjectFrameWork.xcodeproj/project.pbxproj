@@ -2374,7 +2374,7 @@
 		F5C6D84F1D50CEAE00847408 /* PopInformationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopInformationView.h; sourceTree = "<group>"; };
 		F5C6D8501D50CEAE00847408 /* PopInformationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopInformationView.m; sourceTree = "<group>"; };
 		F5C6D8521D50CFBA00847408 /* PopInformationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopInformationView.xib; sourceTree = "<group>"; };
-		F5CAD1521D0112BF00E7E482 /* TheProjectFrameWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheProjectFrameWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5CAD1521D0112BF00E7E482 /* 海品乐购.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "海品乐购.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CAD1561D0112BF00E7E482 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F5CAD1611D0112BF00E7E482 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5CAD1661D0112BF00E7E482 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -6894,7 +6894,7 @@
 		F5CAD1531D0112BF00E7E482 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F5CAD1521D0112BF00E7E482 /* TheProjectFrameWork.app */,
+				F5CAD1521D0112BF00E7E482 /* 海品乐购.app */,
 				F5CAD16B1D0112BF00E7E482 /* TheProjectFrameWorkUITests.xctest */,
 				379814942023F58800A2AE09 /* ChiHuoiOSApp.app */,
 			);
@@ -7590,7 +7590,7 @@
 			);
 			name = TheProjectFrameWork;
 			productName = TheProjectFrameWork;
-			productReference = F5CAD1521D0112BF00E7E482 /* TheProjectFrameWork.app */;
+			productReference = F5CAD1521D0112BF00E7E482 /* 海品乐购.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F5CAD16A1D0112BF00E7E482 /* TheProjectFrameWorkUITests */ = {
@@ -9372,7 +9372,7 @@
 					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lvshenkang.testappid;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "海品乐购";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -9445,7 +9445,7 @@
 					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lvshenkang.testappid;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "海品乐购";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
