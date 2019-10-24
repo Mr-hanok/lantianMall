@@ -276,7 +276,7 @@
         [self loginJump];
         return;
     }else{
-        if ([scheme containsString:@"/phoneh5_zh/index.html"]) {
+        if ([scheme containsString:@"/phoneh5_zh/index.html"]||[scheme containsString:@"/phoneh5_zh/classificationl.html"]||[scheme containsString:@"/phoneh5_zh/myIntegral.html"]||[scheme containsString:@"/phoneh5_zh/myIntegral.html"]|[scheme containsString:@"phoneh5_zh/aboutMe.html"]) {
             self.backbtn.hidden = YES;
         }else{
             self.backbtn.hidden = NO;
