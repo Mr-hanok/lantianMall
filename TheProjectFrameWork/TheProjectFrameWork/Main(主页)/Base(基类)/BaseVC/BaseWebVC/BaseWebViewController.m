@@ -43,10 +43,14 @@
 }
 #pragma mark - 查看其它订单通知
 - (void)kLookOtherOrderNoti:(NSNotification *)noti{
-//    NSDictionary *userinfo= noti.userInfo;
-    NSString *temrooturl =[[KAppRootUrl componentsSeparatedByString:@"/mobile"] firstObject];
-    NSString *urlstr = [temrooturl stringByAppendingString:@"/phoneh5_zh/allMenu.html"];
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlstr]]];
+    NSDictionary *userinfo= noti.userInfo;
+    if (userinfo[@"isInterOrderNoti"]) {
+        [self.webView reload];
+    }else{
+        NSString *temrooturl =[[KAppRootUrl componentsSeparatedByString:@"/mobile"] firstObject];
+        NSString *urlstr = [temrooturl stringByAppendingString:@"/phoneh5_zh/allMenu.html"];
+        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlstr]]];
+    }
     
 }
 
@@ -624,13 +628,18 @@
     
     if ([scheme containsString:@"phoneh5_zh/guestPayBill.html"]) {
         /**提交订单*/
-        NSString *tousertempstr = [[scheme componentsSeparatedByString:@"&totalPrice="] lastObject];
-        NSString *moneystr = [[tousertempstr componentsSeparatedByString:@"&orderId="] firstObject];
-        NSString *orderid = [[tousertempstr componentsSeparatedByString:@"&orderId="] lastObject];
+//        NSString *tousertempstr = [[scheme componentsSeparatedByString:@"&totalPrice="] lastObject];
+//        NSString *moneystr = [[tousertempstr componentsSeparatedByString:@"&orderId="] firstObject];
+//        NSString *orderid = [[tousertempstr componentsSeparatedByString:@"&orderId="] lastObject];
+        NSString *moneystr = [self getParamByName:@"totalPrice" URLString:scheme];
+        NSString *orderid = [self getParamByName:@"orderId" URLString:scheme];;
         MywalletViewController * view = [[MywalletViewController alloc] init];
         if (self.FatherVC)
         {
             view.FatherVC = self.FatherVC;
+        }
+        if ([self.tempUrlStr containsString:@"integralconvert_record.html"]||[self.tempUrlStr containsString:@"convertComplete.html"] ) {
+            view.isIntegralOrder = YES;
         }
         view.isOffline = NO;
         view.orderPayMoney = moneystr;
@@ -643,4 +652,24 @@
     
     return NO;
 }
+
+- (NSString *)getParamByName:(NSString *)name URLString:(NSString *)url
+{
+    NSError *error;
+    NSString *regTags=[[NSString alloc] initWithFormat:@"(^|&|\\?)+%@=+([^&]*)(&|$)", name];
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regTags
+                                                                           options:NSRegularExpressionCaseInsensitive
+                                                                             error:&error];
+     
+    // 执行匹配的过程
+    NSArray *matches = [regex matchesInString:url
+                                      options:0
+                                        range:NSMakeRange(0, [url length])];
+    for (NSTextCheckingResult *match in matches) {
+        NSString *tagValue = [url substringWithRange:[match rangeAtIndex:2]];  // 分组2所对应的串
+        return tagValue;
+    }
+    return @"";
+}
+
 @end

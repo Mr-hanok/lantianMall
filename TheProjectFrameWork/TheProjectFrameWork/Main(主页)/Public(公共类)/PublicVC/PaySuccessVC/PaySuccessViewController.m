@@ -110,7 +110,7 @@
 - (IBAction)looktheOrder:(UIButton *)sender
 {
     
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"kLookOtherOrderNoti" object:nil];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"kLookOtherOrderNoti" object:nil userInfo:@{@"isInterOrderNoti":@(self.ISIntegralConvert)}];
     [self.navigationController popToRootViewControllerAnimated:YES];
 
     
