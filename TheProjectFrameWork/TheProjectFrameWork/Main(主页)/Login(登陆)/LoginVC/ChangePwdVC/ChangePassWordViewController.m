@@ -87,11 +87,12 @@
  */
 - (void)changePassWord
 {
-    [HUDManager showLoadingHUDView:KeyWindow withText:@"请稍等"];
-    [NetWork PostNetWorkWithUrl:@"/reset_password" with:@{@"newPassword":_confirmPwdTF.text,@"user_id":_userName,@"bak_reset_type":@(1)} successBlock:^(NSDictionary *dic) {
+    [HUDManager showLoadingHUDView:self.view];
+    [NetWork PostNetWorkWithUrl:@"/reset_password_p" with:@{@"newPassword":_confirmPwdTF.text,@"mobile":self.phone?:@"",@"code":self.code?:@""} successBlock:^(NSDictionary *dic) {
         /**
          *  找回密码成功
          */
+        [HUDManager showWarningWithText:@"修改密码成功"];
         [self.navigationController popToRootViewControllerAnimated:YES];
     } FailureBlock:^(NSString *msg) {
         [HUDManager showWarningWithError:msg];

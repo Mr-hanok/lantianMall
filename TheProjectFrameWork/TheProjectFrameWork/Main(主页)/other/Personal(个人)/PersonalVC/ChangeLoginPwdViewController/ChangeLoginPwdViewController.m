@@ -53,7 +53,7 @@ static NSString * TextFieldTableCellId = @"TextFieldTableCell";
     }
 
     [HUDManager showWarningWithText:@"请稍候"];
-    [NetWork PostNetWorkWithUrl:@"/reset_password" with:@{@"newPassword":_newPassWord,@"bak_reset_type":@(1),@"user_id":kUserId} successBlock:^(NSDictionary *dic) {
+    [NetWork PostNetWorkWithUrl:@"/reset_password_p" with:@{@"newPassword":_newPassWord,@"mobile":self.phone?:@"",@"code":self.code?:@""} successBlock:^(NSDictionary *dic) {
         [HUDManager hideHUDView];
         [HUDManager showWarningWithError:dic[@"message"]];
         [self.navigationController popToRootViewControllerAnimated:YES];

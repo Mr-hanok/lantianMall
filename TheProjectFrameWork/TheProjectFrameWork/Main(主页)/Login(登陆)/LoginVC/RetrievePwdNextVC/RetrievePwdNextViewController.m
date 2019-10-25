@@ -11,6 +11,7 @@
 #import "LoginButton.h"
 #import "CountDownButton.h"
 #import "NSString+HidePhone.h"
+#import "ChangePassWordViewController.h"
 @interface RetrievePwdNextViewController ()<RegisterTextFielDelegate,CountDownButtonDelegate>
 {
     UILabel * _promptLabel;
@@ -40,6 +41,7 @@
     _userLabel = [[UILabel alloc] init];
     _userLabel.textColor = [UIColor colorWithString:@"#616161"];
     _captchaTF = [[RegisterTextField alloc] initWithPlaceholder:@"请输入验证码" isVerify:NO];
+    [_captchaTF.textField setKeyboardType:UIKeyboardTypeNumberPad];
     _captchaTF.delegate = self;
     __weak typeof(self) weakSelf = self;
     _nextBtn = [[LoginButton alloc] initWithActionBlock:^(id sender) {
@@ -86,7 +88,7 @@
     }];
     [_userLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         layoutBlock(make);
-        make.top.equalTo(_promptLabel.mas_bottom).mas_offset(kScaleHeight(43));
+        make.top.equalTo(_promptLabel.mas_bottom).mas_offset(kScaleHeight(10));
     }];
     [_captchaTF mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(weakSelf.view.mas_left).mas_offset(kScaleWidth(12));
@@ -194,7 +196,6 @@
         }];
     }
 }
-
 - (void)validationEmail:(NSString *)email code:(NSString *)code completed:(void (^) (BOOL successful , id error))completed
 {
     [NetWork PostNetWorkWithUrl:@"/buyer/validation_email" with:@{@"email":email,@"code":code} successBlock:^(NSDictionary *dic) {
@@ -242,8 +243,10 @@
 {
     if([segue.identifier isEqualToString:@"changePwd"])
     {
-        id vc = segue.destinationViewController;
-        [vc setValue:@(_user.userId) forKeyPath:@"userName"];
+        ChangePassWordViewController *vc = segue.destinationViewController;
+        vc.code = _captchaTF.text;
+        vc.userName =  [NSString stringWithFormat:@"%ld",_user.userId];
+        vc.phone = _user.mobile;
     }
 }
 - (void)setCode:(NSString *)code

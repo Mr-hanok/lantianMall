@@ -101,6 +101,8 @@ static NSString * optionCell = @"ChangeOptionCell";
 - (void)popVerifyPassWith:(PopVerifyView *)verifyView
 {
     ChangeLoginPwdViewController * controller = [[ChangeLoginPwdViewController alloc] init];
+    controller.phone = [UserAccountManager shareUserAccountManager].userModel.mobile;
+    controller.code = verifyView.verifyCode;
     [self.navigationController pushViewController:controller animated:YES];
 }
 

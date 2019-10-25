@@ -10,4 +10,6 @@
 
 @interface ChangePassWordViewController : LeftViewController
 @property (nonatomic , copy) NSString * userName;///< 实际上是user_id
+@property (nonatomic, copy) NSString *code;
+@property (nonatomic, copy) NSString *phone;
 @end

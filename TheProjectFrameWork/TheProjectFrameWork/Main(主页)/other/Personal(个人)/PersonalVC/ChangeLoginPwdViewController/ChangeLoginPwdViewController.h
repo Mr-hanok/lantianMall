@@ -9,5 +9,6 @@
 #import "LeftViewController.h"
 
 @interface ChangeLoginPwdViewController : LeftViewController
-
+@property (nonatomic, copy) NSString *phone;
+@property (nonatomic, copy) NSString *code;
 @end
