@@ -64,6 +64,9 @@
     verifyTF = [[RegisterTextField alloc] initWithPlaceholder:@"请输入验证码" isVerify:NO];
     verifyTF.delegate = self;
     _getCode.delegate = self;
+    if (type == PopVerifyTypesPhone) {
+        [verifyTF.textField setKeyboardType:UIKeyboardTypeNumberPad];
+    }
     CountDownButton * getCode = [[CountDownButton alloc] initWithInterval:60 Target:self Sel:@selector(getCodeTime)];
     UIView * bottomLine = [UIView new];
     UIView * midLine = [UIView new];

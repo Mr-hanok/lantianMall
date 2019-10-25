@@ -10,6 +10,7 @@
 #import "VerifyPayInfoView.h"
 #import "LoginButton.h"
 #import "PopVerifyView.h"
+#import "SetPayPassWordViewController.h"
 @interface VerifyPayPwdViewController ()<PopVerifyViewDelegate>
 {
     UILabel * _headerLabel;
@@ -87,8 +88,9 @@
 - (void)popVerifyPassWith:(PopVerifyView *)verifyView
 {
     
-    Class vc = NSClassFromString(@"SetPayPassWordViewController");
-    [self.navigationController pushViewController:[vc new] animated:YES];
+    SetPayPassWordViewController * vc = [[SetPayPassWordViewController alloc] init];
+    vc.code = verifyView.text;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 /**
  *  获取验证码

@@ -83,6 +83,7 @@ static NSString * DefaultTableViewCellId = @"DefaultTableViewCell";
     SetPayPassWordViewController * setPayPwd = [[SetPayPassWordViewController alloc] init];
     setPayPwd.buyer = YES;
     setPayPwd.isCreat = YES;
+    setPayPwd.code = verifyView.text;
     [self.navigationController pushViewController:setPayPwd animated:YES];
     
 }

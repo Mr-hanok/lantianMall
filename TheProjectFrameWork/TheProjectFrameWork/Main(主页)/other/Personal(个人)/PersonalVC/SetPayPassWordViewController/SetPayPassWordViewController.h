@@ -14,4 +14,5 @@
 @property (nonatomic , assign) BOOL buyer;
 @property (nonatomic , copy) NSString * userName;
 @property (nonatomic , assign) BOOL isCreat;
+@property (nonatomic, copy) NSString *code;
 @end

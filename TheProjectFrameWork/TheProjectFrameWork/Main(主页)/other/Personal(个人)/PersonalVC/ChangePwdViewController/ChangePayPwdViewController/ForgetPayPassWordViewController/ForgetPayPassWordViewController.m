@@ -73,6 +73,7 @@ static NSString * ForgetPayCellID = @"ForgetPayCellID";
 {
     SetPayPassWordViewController * setPwd = [[SetPayPassWordViewController alloc] init];
     setPwd.isCreat = NO;
+    setPwd.code = verifyView.text;
     [self.navigationController pushViewController:setPwd animated:YES];
 }
 

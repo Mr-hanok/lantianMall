@@ -39,7 +39,7 @@
     [super viewWillLayoutSubviews];
     __weak typeof(self) weakSelf = self;
     [_headerLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(weakSelf.view.mas_top).mas_offset(kTopSpace + kScaleHeight(10));
+        make.top.equalTo(weakSelf.view.mas_top).mas_offset(kScaleHeight(10));
         make.left.equalTo(weakSelf.view.mas_left);
         make.width.mas_equalTo(weakSelf.view.mas_width);
     }];
@@ -70,6 +70,8 @@
     _payPassWord = [[RegisterTextField alloc] initWithText:nil placeholder:@"输入密码"];
     _payPassWord.delegate = self;
     _authPayPassWord = [[RegisterTextField alloc] initWithText:nil placeholder:@"再次输入密码"];
+    [_payPassWord.textField setKeyboardType:UIKeyboardTypeNumberPad];
+    [_authPayPassWord.textField setKeyboardType:UIKeyboardTypeNumberPad];
     _authPayPassWord.delegate = self;
     _footerLabel = [[TableViewPromptHeaderView alloc] init];
     __weak typeof(self) weakSelf = self;
@@ -109,7 +111,7 @@
         url = @"/updatePayPwdByUser";
     }
     
-    NSMutableDictionary * parmas = [@{@"user_id":kUserId,@"pay_pwd":authPayPassWord} mutableCopy];
+    NSMutableDictionary * parmas = [@{@"user_id":kUserId,@"pay_pwd":authPayPassWord,@"code":self.code?:@""} mutableCopy];
 
     [NetWork PostNetWorkWithUrl:url with:parmas successBlock:^(NSDictionary *dic) {
         [HUDManager showWarningWithText:@"设置支付密码成功"];
