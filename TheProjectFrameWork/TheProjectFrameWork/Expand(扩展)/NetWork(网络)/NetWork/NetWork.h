@@ -9,7 +9,7 @@ typedef enum : NSUInteger {
     MessageCodeTypeRegister=2,
     MessageCodeTypeChangePwd=3,
     MessageCodeTypeChangePhone=4,
-    MessageCodeTypeChangePayPwd=4,
+    MessageCodeTypeChangePayPwd=5,
 } MessageCodeType;
 #import <Foundation/Foundation.h>
 @class PhotoInfoModel;

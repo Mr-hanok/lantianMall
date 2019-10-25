@@ -464,7 +464,6 @@
 		3798134B2023F58800A2AE09 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5709F021D23789F00DA0778 /* HomeTableViewCell.m */; };
 		3798134C2023F58800A2AE09 /* MineShopAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A9810F1D687A860095739C /* MineShopAccountCell.m */; };
 		3798134D2023F58800A2AE09 /* TransactionDetailsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A980DD1D687A850095739C /* TransactionDetailsModel.m */; };
-		3798134F2023F58800A2AE09 /* VerifyPayPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BE62351D3634DE00FE1A16 /* VerifyPayPwdViewController.m */; };
 		379813512023F58800A2AE09 /* AboutUsVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F06A581E4C47CD006B0F49 /* AboutUsVCViewController.m */; };
 		379813522023F58800A2AE09 /* ScreenDetialModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F53621921D63041E005B8034 /* ScreenDetialModel.m */; };
 		379813532023F58800A2AE09 /* ChangePassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BE61E61D3615F900FE1A16 /* ChangePassWordViewController.m */; };
@@ -885,7 +884,6 @@
 		39BE622A1D3615F900FE1A16 /* SelectLanguageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BE62191D3615F900FE1A16 /* SelectLanguageView.m */; };
 		39BE622E1D36172B00FE1A16 /* UserAgreementButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BE622D1D36172B00FE1A16 /* UserAgreementButton.m */; };
 		39BE62321D36317300FE1A16 /* FoundPayPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BE62311D36317300FE1A16 /* FoundPayPwdViewController.m */; };
-		39BE62361D3634DE00FE1A16 /* VerifyPayPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BE62351D3634DE00FE1A16 /* VerifyPayPwdViewController.m */; };
 		39BE623A1D36358B00FE1A16 /* VerifyPayInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BE62391D36358B00FE1A16 /* VerifyPayInfoView.m */; };
 		39C35F371D2E041200CD9E7D /* ChangeLoginPwdOptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39C35F361D2E041200CD9E7D /* ChangeLoginPwdOptionViewController.m */; };
 		39C35F3A1D2E046900CD9E7D /* OldPwdChangeLoginPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39C35F391D2E046900CD9E7D /* OldPwdChangeLoginPwdViewController.m */; };
@@ -1773,8 +1771,6 @@
 		39BE622D1D36172B00FE1A16 /* UserAgreementButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAgreementButton.m; sourceTree = "<group>"; };
 		39BE62301D36317300FE1A16 /* FoundPayPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundPayPwdViewController.h; sourceTree = "<group>"; };
 		39BE62311D36317300FE1A16 /* FoundPayPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundPayPwdViewController.m; sourceTree = "<group>"; };
-		39BE62341D3634DE00FE1A16 /* VerifyPayPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerifyPayPwdViewController.h; sourceTree = "<group>"; };
-		39BE62351D3634DE00FE1A16 /* VerifyPayPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerifyPayPwdViewController.m; sourceTree = "<group>"; };
 		39BE62381D36358B00FE1A16 /* VerifyPayInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerifyPayInfoView.h; sourceTree = "<group>"; };
 		39BE62391D36358B00FE1A16 /* VerifyPayInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerifyPayInfoView.m; sourceTree = "<group>"; };
 		39C35F351D2E041200CD9E7D /* ChangeLoginPwdOptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeLoginPwdOptionViewController.h; sourceTree = "<group>"; };
@@ -4460,15 +4456,6 @@
 			path = FoundPayPwdViewController;
 			sourceTree = "<group>";
 		};
-		39BE62331D3634D400FE1A16 /* VerifyPayPwdViewController */ = {
-			isa = PBXGroup;
-			children = (
-				39BE62341D3634DE00FE1A16 /* VerifyPayPwdViewController.h */,
-				39BE62351D3634DE00FE1A16 /* VerifyPayPwdViewController.m */,
-			);
-			path = VerifyPayPwdViewController;
-			sourceTree = "<group>";
-		};
 		39BE62371D36357D00FE1A16 /* VerifyPayInfoView */ = {
 			isa = PBXGroup;
 			children = (
@@ -6432,7 +6419,6 @@
 				3957A7271D38C08100CE104C /* ShootPhotoViewController */,
 				3957A7231D38B0FA00CE104C /* NameAuthViewController */,
 				39D8170F1D372CA4006BDBBA /* SetPayPassWordViewController */,
-				39BE62331D3634D400FE1A16 /* VerifyPayPwdViewController */,
 				39BE622F1D36316500FE1A16 /* FoundPayPwdViewController */,
 				39AE9FE91D34ABFF00E80648 /* ComplaintDetailedViewController */,
 				39AE9FD91D34884000E80648 /* ComplaintManagerViewController */,
@@ -8559,7 +8545,6 @@
 				3798134B2023F58800A2AE09 /* HomeTableViewCell.m in Sources */,
 				3798134C2023F58800A2AE09 /* MineShopAccountCell.m in Sources */,
 				3798134D2023F58800A2AE09 /* TransactionDetailsModel.m in Sources */,
-				3798134F2023F58800A2AE09 /* VerifyPayPwdViewController.m in Sources */,
 				379813512023F58800A2AE09 /* AboutUsVCViewController.m in Sources */,
 				379813522023F58800A2AE09 /* ScreenDetialModel.m in Sources */,
 				379813532023F58800A2AE09 /* ChangePassWordViewController.m in Sources */,
@@ -9017,7 +9002,6 @@
 				F5709F1B1D23789F00DA0778 /* HomeTableViewCell.m in Sources */,
 				39A981431D687A860095739C /* MineShopAccountCell.m in Sources */,
 				39A981331D687A860095739C /* TransactionDetailsModel.m in Sources */,
-				39BE62361D3634DE00FE1A16 /* VerifyPayPwdViewController.m in Sources */,
 				F5F06A5A1E4C47CD006B0F49 /* AboutUsVCViewController.m in Sources */,
 				F53621931D63041E005B8034 /* ScreenDetialModel.m in Sources */,
 				39BE621A1D3615F900FE1A16 /* ChangePassWordViewController.m in Sources */,
