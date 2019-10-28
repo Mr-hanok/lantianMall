@@ -111,6 +111,7 @@
 {
     
     [[NSNotificationCenter defaultCenter]postNotificationName:@"kLookOtherOrderNoti" object:nil userInfo:@{@"isInterOrderNoti":@(self.ISIntegralConvert)}];
+
     [self.navigationController popToRootViewControllerAnimated:YES];
 
     

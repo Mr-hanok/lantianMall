@@ -44,8 +44,10 @@
 #pragma mark - 查看其它订单通知
 - (void)kLookOtherOrderNoti:(NSNotification *)noti{
     NSDictionary *userinfo= noti.userInfo;
-    if (userinfo[@"isInterOrderNoti"]) {
-        [self.webView reload];
+    if ( [[userinfo valueForKey:@"isInterOrderNoti"] integerValue] == 1) {
+        NSString *temrooturl =[[KAppRootUrl componentsSeparatedByString:@"/mobile"] firstObject];
+        NSString *urlstr = [temrooturl stringByAppendingString:@"/phoneh5_zh/integralconvert_record.html"];
+        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlstr]]];
     }else{
         NSString *temrooturl =[[KAppRootUrl componentsSeparatedByString:@"/mobile"] firstObject];
         NSString *urlstr = [temrooturl stringByAppendingString:@"/phoneh5_zh/allMenu.html"];
@@ -640,6 +642,8 @@
         }
         if ([self.tempUrlStr containsString:@"integralconvert_record.html"]||[self.tempUrlStr containsString:@"convertComplete.html"] ) {
             view.isIntegralOrder = YES;
+        }else{
+            view.isIntegralOrder = NO;
         }
         view.isOffline = NO;
         view.orderPayMoney = moneystr;
