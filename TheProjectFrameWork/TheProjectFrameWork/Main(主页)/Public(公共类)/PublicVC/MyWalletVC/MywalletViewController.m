@@ -470,7 +470,7 @@ static NSString * PayTypecellIdentifier = @"MyWalletPayTypeTableViewCell";
     {
             if (indexPath.row==2)
             {
-                NSString * attrStri = [NSString stringWithFormat:@"(￥ %.2f)",[[UserAccountManager shareUserAccountManager].userModel.accountBalance floatValue]];
+                NSString * attrStri = [NSString stringWithFormat:@"(￥ %.2f)",[[UserAccountManager shareUserAccountManager].userModel.accountBalance doubleValue]];
                 PayTypeModel *model =self.dataArray[indexPath.row];
                 NSString *strings  =[NSString stringWithFormat:@"%@ %@",model.name,attrStri];
                 NSRange range = [strings rangeOfString:attrStri];
