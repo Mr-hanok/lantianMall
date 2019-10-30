@@ -82,6 +82,12 @@
                [params setValue:temtoken?:@"" forKey:@"appToken"];
 
            }
+       }else{
+           if ([postReplaceUrls containsString:@"mobile/orders_price"]) {
+               NSString *temtoken =  [[NSUserDefaults standardUserDefaults] objectForKey: @"kDefaultH5Token"];
+               [params setValue:temtoken?:@"" forKey:@"appToken"];
+
+           }
        }
     // 请求
     [manager POST:postReplaceUrls parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
@@ -127,6 +133,12 @@
         if ([postReplaceUrls containsString:@"mobile/getPwSalt"]||[postReplaceUrls containsString:@"buyer/validation_phone"]||[postReplaceUrls containsString:@"mbuyer/findPassword"]||[postReplaceUrls containsString:@"/logout"]) {
             
         }else{
+            NSString *temtoken =  [[NSUserDefaults standardUserDefaults] objectForKey: @"kDefaultH5Token"];
+            [params setValue:temtoken?:@"" forKey:@"appToken"];
+
+        }
+    }else{
+        if ([postReplaceUrls containsString:@"mobile/orders_price"]) {
             NSString *temtoken =  [[NSUserDefaults standardUserDefaults] objectForKey: @"kDefaultH5Token"];
             [params setValue:temtoken?:@"" forKey:@"appToken"];
 
