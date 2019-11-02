@@ -35,9 +35,9 @@
 // 状态栏高度
 #define kStatusHeight  [[UIApplication sharedApplication] statusBarFrame].size.height
 
-#define kScaleWidth(width) KScreenBoundWidth * (width/320.0f) /* 根据5s的比例算宽度 */
-#define kScaleHeight(height) KScreenBoundWidth * (height/320.0f)/* 根据5s的比例算高度 */
-#define kAppAsiaFontSize(size) KScreenBoundWidth * (size/320.0f)
-#define fixHegit(m) [UIScreen mainScreen].bounds.size.width/320.0*(m)
+#define kScaleWidth(width) KScreenBoundWidth * (width/375.0f) /* 根据5s的比例算宽度 */
+#define kScaleHeight(height) KScreenBoundWidth * (height/375.0f)/* 根据5s的比例算高度 */
+#define kAppAsiaFontSize(size) KScreenBoundWidth * (size/375.0f)
+#define fixHegit(m) [UIScreen mainScreen].bounds.size.width/375.0f*(m)
 
 #endif /* BaseMacros_h */

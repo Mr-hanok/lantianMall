@@ -11,6 +11,8 @@
 {
     UIImageView * _imageview;
     UILabel * _titleLabel;
+    UILabel *_countLabel;
+
 }
 @end
 @implementation OrderStatusView
@@ -44,6 +46,21 @@
         make.top.equalTo(_imageview.mas_bottom).mas_offset(kScaleHeight(3));
         make.right.left.equalTo(weakSelf);
         make.bottom.equalTo(weakSelf.mas_bottom).mas_offset(-5);
+    }];
+    _countLabel = [[UILabel alloc]init];
+    _countLabel.textColor = [UIColor whiteColor];
+    _countLabel.backgroundColor = kNavigationColor;
+    _countLabel.text = @"0";
+    _countLabel.font = [UIFont systemFontOfSize:8.5];
+    _countLabel.layer.cornerRadius = 7.f;
+    _countLabel.layer.masksToBounds = YES;
+    _countLabel.textAlignment = NSTextAlignmentCenter;
+    _countLabel.hidden = YES;
+    [self addSubview:_countLabel];
+    [_countLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(_imageview.mas_centerX).offset(8);
+        make.centerY.equalTo(_imageview.mas_centerY).offset(-8);
+        make.width.height.mas_equalTo(14);
     }];
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
@@ -124,4 +141,14 @@
     _image = image;
     _imageview.image = image;
 }
+-(void)setCountStr:(NSString *)countStr{
+    _countStr = countStr;
+    if ([countStr isEqualToString:@"0"]|| countStr == nil) {
+        _countLabel.hidden = YES;
+    }else{
+        _countLabel.hidden = NO;
+    }
+    _countLabel.text = countStr;
+}
+
 @end

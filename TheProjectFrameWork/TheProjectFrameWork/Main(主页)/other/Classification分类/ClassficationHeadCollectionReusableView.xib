@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="ClassficationHeadCollectionReusableView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="面部护肤" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dc3-ee-O5w">
+                    <rect key="frame" x="10" y="0.0" width="61.5" height="50"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rG-Wv-Lzu">
+                    <rect key="frame" x="10" y="0.0" width="270" height="50"/>
+                    <state key="normal">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="detialListButtonClicked:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="Ew0-aR-Y8q"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="1rG-Wv-Lzu" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="10" id="2ro-ts-RXW"/>
+                <constraint firstItem="dc3-ee-O5w" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="GAT-3X-q1h"/>
+                <constraint firstAttribute="trailing" secondItem="1rG-Wv-Lzu" secondAttribute="trailing" constant="40" id="WOh-5k-r2Z"/>
+                <constraint firstAttribute="bottom" secondItem="1rG-Wv-Lzu" secondAttribute="bottom" id="Ylp-W5-Cl6"/>
+                <constraint firstItem="1rG-Wv-Lzu" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="Z5w-Ee-fUg"/>
+                <constraint firstAttribute="bottom" secondItem="dc3-ee-O5w" secondAttribute="bottom" id="bDu-xG-CaR"/>
+                <constraint firstItem="dc3-ee-O5w" firstAttribute="leading" secondItem="1rG-Wv-Lzu" secondAttribute="leading" id="ljA-ap-kVo"/>
+            </constraints>
+            <connections>
+                <outlet property="detailContentlabel" destination="dc3-ee-O5w" id="lqe-Sl-ecq"/>
+                <outlet property="detailListButton" destination="1rG-Wv-Lzu" id="lCk-dI-0QO"/>
+            </connections>
+            <point key="canvasLocation" x="52.799999999999997" y="69.265367316341838"/>
+        </collectionReusableView>
+    </objects>
+</document>

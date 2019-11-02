@@ -83,7 +83,7 @@
 
            }
        }else{
-           if ([postReplaceUrls containsString:@"mobile/orders_price"]) {
+           if ([postReplaceUrls containsString:@"mobile/orders_price"]||[postReplaceUrls containsString:@"/goods/remove_goods_cart"]) {
                NSString *temtoken =  [[NSUserDefaults standardUserDefaults] objectForKey: @"kDefaultH5Token"];
                [params setValue:temtoken?:@"" forKey:@"appToken"];
 
@@ -138,7 +138,7 @@
 
         }
     }else{
-        if ([postReplaceUrls containsString:@"mobile/orders_price"]) {
+        if ([postReplaceUrls containsString:@"mobile/orders_price"]||[postReplaceUrls containsString:@"/goods/remove_goods_cart"]) {
             NSString *temtoken =  [[NSUserDefaults standardUserDefaults] objectForKey: @"kDefaultH5Token"];
             [params setValue:temtoken?:@"" forKey:@"appToken"];
 

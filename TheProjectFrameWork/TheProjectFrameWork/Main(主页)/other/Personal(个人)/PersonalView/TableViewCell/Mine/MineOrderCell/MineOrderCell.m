@@ -60,6 +60,23 @@
     [subviews enumerateObjectsUsingBlock:^(OrderStatusView *  _Nonnull view, NSUInteger idx, BOOL * _Nonnull stop) {
         view.text = stautsArr[idx][@"title"];
         view.image = [UIImage imageNamed:stautsArr[idx][@"image"]];
+        switch (idx) {
+                   case 0:
+                       view.countStr = [UserAccountManager shareUserAccountManager].orderSubmitNum;
+                       break;
+                   case 1:
+                       view.countStr = [UserAccountManager shareUserAccountManager].orderShippingNum;
+                       break;
+                   case 2:
+                       view.countStr = [UserAccountManager shareUserAccountManager].orderReceiveNum;
+                       break;
+                   case 3:
+                       view.countStr = [UserAccountManager shareUserAccountManager].orderCancelNum;
+                       break;
+                   case 4:
+                       view.countStr = [UserAccountManager shareUserAccountManager].orderRefundNum;
+                       break;
+               }
     }];
 }
 - (void)orderStatusWithType:(SellerOrderTypes)type

@@ -61,6 +61,25 @@ static NSString * MinePropertyCellIdentifier = @"MinePropertyCell";
 }
 - (void)updateHeadView
 {
+    /**订单数量*/
+    WeakSelf(self)
+       [NetWork PostNetWorkWithUrl:@"/buyer/findOrderCountByRedis" with:@{@"user_id":kUserId} successBlock:^(NSDictionary *dic) {
+
+           NSDictionary *tempDic = dic[@"data"];
+           [UserAccountManager shareUserAccountManager].orderCancelNum = [tempDic[@"orderCancelNum"] stringValue];
+           [UserAccountManager shareUserAccountManager].orderReceiveNum = [tempDic[@"orderReceiveNum"] stringValue];
+           [UserAccountManager shareUserAccountManager].orderRefundNum = [tempDic[@"orderRefundNum"] stringValue];
+           [UserAccountManager shareUserAccountManager].orderShippingNum = [tempDic[@"orderShippingNum"] stringValue];
+           [UserAccountManager shareUserAccountManager].orderSubmitNum = [tempDic[@"orderSubmitNum"] stringValue];
+           [UserAccountManager shareUserAccountManager].paymentOrderNum = [tempDic[@"paymentOrderNum"] stringValue];
+
+           [weakSelf.mineTableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationNone];
+
+       } FailureBlock:^(NSString *msg) {
+           
+       } errorBlock:^(id error) {
+           
+       }];
     [self.model refreshUserInfo];
 }
 -(void)viewWillAppear:(BOOL)animated{
@@ -87,6 +106,10 @@ static NSString * MinePropertyCellIdentifier = @"MinePropertyCell";
 
 
 #pragma mark - tableviewDelegate&&DataSource Method
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 9;
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if(section == 0)
@@ -100,7 +123,11 @@ static NSString * MinePropertyCellIdentifier = @"MinePropertyCell";
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return section == 5 ? 0 : kScaleHeight(10);
+    if (section == 0 || section == 1 || section == 2) {
+        return kScaleHeight(10);
+    }else{
+        return section == 5 ? 0 : 0.6;
+    }
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return  section == 8 ? kScaleHeight(10) :0;
@@ -206,10 +233,6 @@ static NSString * MinePropertyCellIdentifier = @"MinePropertyCell";
             break;
     }
     return nil;
-}
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 9;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -587,7 +610,7 @@ static NSString * MinePropertyCellIdentifier = @"MinePropertyCell";
         tableview.dataSource = self;
         tableview.estimatedRowHeight = 100;
         tableview.separatorColor = [UIColor clearColor];
-        tableview.backgroundColor = kBGColor;
+        tableview.backgroundColor = KSepLineColor;
         [tableview registerClass:[MineOrderCell class] forCellReuseIdentifier:MineOrderIdentifier];
         [tableview registerClass:[AllorderCell class] forCellReuseIdentifier:AllorderCellIdentifier];
         [tableview registerClass:[MinePropertyCell class] forCellReuseIdentifier:MinePropertyCellIdentifier];

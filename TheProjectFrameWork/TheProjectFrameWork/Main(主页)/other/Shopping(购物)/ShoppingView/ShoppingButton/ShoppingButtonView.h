@@ -15,6 +15,7 @@
 /**购物车商品加减按钮*/
 @interface ShoppingButtonView : BaseView
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bgViewHeight;
 
 /** 减 */
 @property (weak, nonatomic) IBOutlet UIButton *subtractButton;

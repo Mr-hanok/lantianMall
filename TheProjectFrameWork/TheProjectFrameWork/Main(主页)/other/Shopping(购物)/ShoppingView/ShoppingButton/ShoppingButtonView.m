@@ -17,6 +17,9 @@
     view.goodsNumber = number;
     [view SetView];
     view.shoppingNumber.text = [NSString stringWithFormat:@"%ld",(long)view.goodsNumber];
+    if (KSCREEN_WIDTH == 320) {
+        view.bgViewHeight.constant = 24;
+    }
     return view;
 }
 
@@ -24,19 +27,22 @@
 {
     if (self.goodsNumber<=1)
     {
-        [self.subtractButton setBackgroundImage:[UIImage imageNamed:@"huisejian"] forState:UIControlStateNormal];
+        [self.subtractButton setImage:[UIImage imageNamed:@"zjgwcbgjiangrayicon"] forState:UIControlStateNormal];
     }
     else
     {
-        [self.subtractButton setBackgroundImage:[UIImage imageNamed:@"jian"] forState:UIControlStateNormal];
+        [self.subtractButton setImage:[UIImage imageNamed:@"zjgwcbgjianicon"] forState:UIControlStateNormal];
+
     }
     
     if (self.goodsNumber<self.goodsCollectionNumber){
-        [self.addButton setBackgroundImage:[UIImage imageNamed:@"jia"] forState:UIControlStateNormal];
+        [self.addButton setImage:[UIImage imageNamed:@"zjgwcbgjiaicon"] forState:UIControlStateNormal];
+
     }
     else
     {
-        [self.addButton setBackgroundImage:[UIImage imageNamed:@"huisejia"] forState:UIControlStateNormal];
+        [self.addButton setImage:[UIImage imageNamed:@"zjgwcbgjiagrayicon"] forState:UIControlStateNormal];
+
     }
 }
 -(void)SetTheGoodsNumber:(NSInteger)number
@@ -74,16 +80,21 @@
     {
         self.goodsNumber++;
         if (self.goodsNumber==self.goodsCollectionNumber) {
-            [self.addButton setBackgroundImage:[UIImage imageNamed:@"huisejia"] forState:UIControlStateNormal];
+            
+            [self.addButton setImage:[UIImage imageNamed:@"zjgwcbgjiagrayicon"] forState:UIControlStateNormal];
         }
         self.shoppingNumber.text = [NSString stringWithFormat:@"%ld",(long)self.goodsNumber];
         [self.delegate shoppingNumberChangeedvalue:self.goodsNumber];
+        
         if (self.goodsNumber<=1){
-            [self.subtractButton setBackgroundImage:[UIImage imageNamed:@"huisejian"] forState:UIControlStateNormal];
+            
+            [self.subtractButton setImage:[UIImage imageNamed:@"zjgwcbgjiangrayicon"] forState:UIControlStateNormal];
+
         }
         else
         {
-            [self.subtractButton setBackgroundImage:[UIImage imageNamed:@"jian"] forState:UIControlStateNormal];
+            [self.subtractButton setImage:[UIImage imageNamed:@"zjgwcbgjianicon"] forState:UIControlStateNormal];
+
         }
     }
     else
@@ -95,8 +106,11 @@
 
 - (IBAction)subtractButtonClicked:(UIButton *)sender
 {
+    if (self.goodsNumber <=1){
+        return;
+    }
     if (self.goodsNumber<self.goodsCollectionNumber) {
-       [self.addButton setBackgroundImage:[UIImage imageNamed:@"jia"] forState:UIControlStateNormal];
+        [self.addButton setImage:[UIImage imageNamed:@"zjgwcbgjiaicon"] forState:UIControlStateNormal];
     }
     if (self.goodsNumber <=1)
     {
@@ -108,15 +122,13 @@
         [self.delegate shoppingNumberChangeedvalue:self.goodsNumber];
     }
     if (self.goodsNumber<=1){
-        [sender setBackgroundImage:[UIImage imageNamed:@"huisejian"] forState:UIControlStateNormal];
+        [sender setImage:[UIImage imageNamed:@"zjgwcbgjiangrayicon"] forState:UIControlStateNormal];
     }
     else
     {
-        [sender setBackgroundImage:[UIImage imageNamed:@"jian"] forState:UIControlStateNormal];
+        [sender setImage:[UIImage imageNamed:@"zjgwcbgjianicon"] forState:UIControlStateNormal];
     }
-    if (self.goodsNumber<self.goodsCollectionNumber) {
-    [self.addButton setBackgroundImage:[UIImage imageNamed:@"jia"] forState:UIControlStateNormal];
-    }
+   
 }
 
 

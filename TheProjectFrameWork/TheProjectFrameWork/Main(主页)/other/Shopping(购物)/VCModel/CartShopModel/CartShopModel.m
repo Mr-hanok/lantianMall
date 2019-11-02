@@ -11,7 +11,7 @@
 @implementation CartShopModel
 
 +(NSDictionary*)mj_replacedKeyFromPropertyName
-{
+{   
     return @{
              @"cartShopId" :@"id",
              };

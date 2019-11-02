@@ -18,5 +18,8 @@
 @property (nonatomic, copy) NSString *icon_img;
 
 @property(assign,nonatomic) BOOL  nextChilds;
+@property (nonatomic, assign) float height;
+
+- (float)configHeight;
 
 @end

@@ -21,12 +21,16 @@
 /** 系统字体 */
 #define KSystemFont(Size) [UIFont systemFontOfSize:(Size)]
 
+#define kDefaultLifeImgV21   @"Default_Life21"
+#define kDefaultLifeImgV11   @"Default_Life11"
+#define kDefaultLifeImgV32   @"Default_Life32"
+#define kDefaultLifeImgV43   @"Default_Life43"
+#define kDefaultLifeImgV53   @"Default_Life53"
 
-
-#define kDefaultGoodsImgV   @"defaultImgForGoods"
-#define kDefaultGoodsImgH   @"defaultImgForGoods"
-#define kDefaultBannerImage   @"defaultImgbanner"
-#define kDefaultGoodsDetail   @"defaultImgGoodsdetail"
+#define kDefaultGoodsImgV   @"Default_Life11"
+#define kDefaultGoodsImgH   @"Default_Life11"
+#define kDefaultBannerImage   @"Default_Life21"
+#define kDefaultGoodsDetail   @"Default_Life11"
 //
 #define kRootViewController [UIApplication sharedApplication].delegate.window.rootViewController
 #define Kwindow [UIApplication sharedApplication].keyWindow 
@@ -48,7 +52,7 @@
 #define KDeepBlueColor     [UIColor colorWithString:@"#4694d1"]//深蓝色
 #define kOrangeColor       [UIColor colorWithString:@"#f39800"]//橘色
 #define kLigihtOrageColor  [UIColor colorWithString:@"#b0a79e"]//浅橘色
-#define KSepLineColor      [UIColor colorWithString:@"#efefef"]//分割线颜色浅浅灰
+#define KSepLineColor      [UIColor colorWithString:@"#f5f5f5"]//分割线颜色浅浅灰
 
 #define KMingChuColor      [UIColor colorWithString:@"#4273E1"]
 #define kTextDeepDarkColor [UIColor colorWithString:@"#555555"]//深灰色

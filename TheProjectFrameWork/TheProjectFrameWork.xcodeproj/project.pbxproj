@@ -924,6 +924,27 @@
 		39FCCEAA1DD3284C00F09D7F /* NSString+OrderStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FCCEA91DD3284C00F09D7F /* NSString+OrderStatus.m */; };
 		8D17725ECD11A7C49F783B9F /* libPods-TheProjectFrameWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5821D5C56899D92B590D1D /* libPods-TheProjectFrameWork.a */; };
 		932298AF235F421600DAFAAA /* lantianqidongtu.png in Resources */ = {isa = PBXBuildFile; fileRef = 932298AE235F421600DAFAAA /* lantianqidongtu.png */; };
+		9327AD38236D2088004F8DA4 /* ClassificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327AD35236D2087004F8DA4 /* ClassificationViewController.m */; };
+		9327AD39236D2088004F8DA4 /* ClassificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9327AD36236D2087004F8DA4 /* ClassificationViewController.xib */; };
+		9327AD3D236D20BA004F8DA4 /* ClassficationMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327AD3A236D20BA004F8DA4 /* ClassficationMenuTableViewCell.m */; };
+		9327AD3E236D20BA004F8DA4 /* ClassficationMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9327AD3B236D20BA004F8DA4 /* ClassficationMenuTableViewCell.xib */; };
+		9327AD42236D20CA004F8DA4 /* ClassficationLeftTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9327AD3F236D20C9004F8DA4 /* ClassficationLeftTableViewCell.xib */; };
+		9327AD43236D20CA004F8DA4 /* ClassficationLeftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327AD40236D20C9004F8DA4 /* ClassficationLeftTableViewCell.m */; };
+		9327AD47236D217A004F8DA4 /* ClassficationDetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327AD45236D2179004F8DA4 /* ClassficationDetailCollectionViewCell.m */; };
+		9327AD48236D217A004F8DA4 /* ClassficationDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9327AD46236D2179004F8DA4 /* ClassficationDetailCollectionViewCell.xib */; };
+		9327AD4C236D21AE004F8DA4 /* ClassficationHeadCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9327AD49236D21AE004F8DA4 /* ClassficationHeadCollectionReusableView.xib */; };
+		9327AD4D236D21AE004F8DA4 /* ClassficationHeadCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327AD4B236D21AE004F8DA4 /* ClassficationHeadCollectionReusableView.m */; };
+		9327AD4F236D2315004F8DA4 /* ShoppingCart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9327AD4E236D2314004F8DA4 /* ShoppingCart.storyboard */; };
+		9327AD54236D2381004F8DA4 /* IntegralMallHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327AD51236D2380004F8DA4 /* IntegralMallHomeViewController.m */; };
+		9327AD60236D23AD004F8DA4 /* IntegralHomeGoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9327AD57236D23AD004F8DA4 /* IntegralHomeGoodsCell.xib */; };
+		9327AD61236D23AD004F8DA4 /* IntegralHomeGoodsHorizontalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327AD59236D23AD004F8DA4 /* IntegralHomeGoodsHorizontalCell.m */; };
+		9327AD62236D23AD004F8DA4 /* IntegralHomeGoodsHorizontalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9327AD5A236D23AD004F8DA4 /* IntegralHomeGoodsHorizontalCell.xib */; };
+		9327AD63236D23AD004F8DA4 /* IntegralMallHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9327AD5C236D23AD004F8DA4 /* IntegralMallHeadView.xib */; };
+		9327AD64236D23AD004F8DA4 /* IntegralMallHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327AD5D236D23AD004F8DA4 /* IntegralMallHeadView.m */; };
+		9327AD65236D23AD004F8DA4 /* IntegralHomeGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327AD5F236D23AD004F8DA4 /* IntegralHomeGoodsCell.m */; };
+		9327AD6A236D23CE004F8DA4 /* IntegralHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327AD66236D23CD004F8DA4 /* IntegralHomeModel.m */; };
+		9327AD6B236D23CE004F8DA4 /* IntegralBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327AD69236D23CD004F8DA4 /* IntegralBannerModel.m */; };
+		9327AD6F236D25DB004F8DA4 /* ShoppingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327AD6D236D25DB004F8DA4 /* ShoppingViewController.m */; };
 		F503E9CC1D051A7B001CB721 /* NetWork+BodyAndCookie.m in Sources */ = {isa = PBXBuildFile; fileRef = F503E9CB1D051A7B001CB721 /* NetWork+BodyAndCookie.m */; };
 		F50C34691DAE51350059ED7F /* ShufflingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F50C34681DAE51350059ED7F /* ShufflingManager.m */; };
 		F50D19361DBEF1DA001ED497 /* StationChatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F50D19351DBEF1DA001ED497 /* StationChatModel.m */; };
@@ -1836,6 +1857,39 @@
 		451F9351589DC8386A09C1F1 /* Pods-TheProjectFrameWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheProjectFrameWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheProjectFrameWork/Pods-TheProjectFrameWork.debug.xcconfig"; sourceTree = "<group>"; };
 		8F5821D5C56899D92B590D1D /* libPods-TheProjectFrameWork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TheProjectFrameWork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		932298AE235F421600DAFAAA /* lantianqidongtu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lantianqidongtu.png; sourceTree = "<group>"; };
+		9327AD35236D2087004F8DA4 /* ClassificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassificationViewController.m; sourceTree = "<group>"; };
+		9327AD36236D2087004F8DA4 /* ClassificationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassificationViewController.xib; sourceTree = "<group>"; };
+		9327AD37236D2088004F8DA4 /* ClassificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassificationViewController.h; sourceTree = "<group>"; };
+		9327AD3A236D20BA004F8DA4 /* ClassficationMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassficationMenuTableViewCell.m; sourceTree = "<group>"; };
+		9327AD3B236D20BA004F8DA4 /* ClassficationMenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassficationMenuTableViewCell.xib; sourceTree = "<group>"; };
+		9327AD3C236D20BA004F8DA4 /* ClassficationMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassficationMenuTableViewCell.h; sourceTree = "<group>"; };
+		9327AD3F236D20C9004F8DA4 /* ClassficationLeftTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassficationLeftTableViewCell.xib; sourceTree = "<group>"; };
+		9327AD40236D20C9004F8DA4 /* ClassficationLeftTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassficationLeftTableViewCell.m; sourceTree = "<group>"; };
+		9327AD41236D20C9004F8DA4 /* ClassficationLeftTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassficationLeftTableViewCell.h; sourceTree = "<group>"; };
+		9327AD44236D2179004F8DA4 /* ClassficationDetailCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassficationDetailCollectionViewCell.h; sourceTree = "<group>"; };
+		9327AD45236D2179004F8DA4 /* ClassficationDetailCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassficationDetailCollectionViewCell.m; sourceTree = "<group>"; };
+		9327AD46236D2179004F8DA4 /* ClassficationDetailCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassficationDetailCollectionViewCell.xib; sourceTree = "<group>"; };
+		9327AD49236D21AE004F8DA4 /* ClassficationHeadCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassficationHeadCollectionReusableView.xib; sourceTree = "<group>"; };
+		9327AD4A236D21AE004F8DA4 /* ClassficationHeadCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassficationHeadCollectionReusableView.h; sourceTree = "<group>"; };
+		9327AD4B236D21AE004F8DA4 /* ClassficationHeadCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassficationHeadCollectionReusableView.m; sourceTree = "<group>"; };
+		9327AD4E236D2314004F8DA4 /* ShoppingCart.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShoppingCart.storyboard; sourceTree = "<group>"; };
+		9327AD51236D2380004F8DA4 /* IntegralMallHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegralMallHomeViewController.m; sourceTree = "<group>"; };
+		9327AD53236D2380004F8DA4 /* IntegralMallHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegralMallHomeViewController.h; sourceTree = "<group>"; };
+		9327AD57236D23AD004F8DA4 /* IntegralHomeGoodsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntegralHomeGoodsCell.xib; sourceTree = "<group>"; };
+		9327AD58236D23AD004F8DA4 /* IntegralHomeGoodsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegralHomeGoodsCell.h; sourceTree = "<group>"; };
+		9327AD59236D23AD004F8DA4 /* IntegralHomeGoodsHorizontalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegralHomeGoodsHorizontalCell.m; sourceTree = "<group>"; };
+		9327AD5A236D23AD004F8DA4 /* IntegralHomeGoodsHorizontalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntegralHomeGoodsHorizontalCell.xib; sourceTree = "<group>"; };
+		9327AD5B236D23AD004F8DA4 /* IntegralMallHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegralMallHeadView.h; sourceTree = "<group>"; };
+		9327AD5C236D23AD004F8DA4 /* IntegralMallHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntegralMallHeadView.xib; sourceTree = "<group>"; };
+		9327AD5D236D23AD004F8DA4 /* IntegralMallHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegralMallHeadView.m; sourceTree = "<group>"; };
+		9327AD5E236D23AD004F8DA4 /* IntegralHomeGoodsHorizontalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegralHomeGoodsHorizontalCell.h; sourceTree = "<group>"; };
+		9327AD5F236D23AD004F8DA4 /* IntegralHomeGoodsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegralHomeGoodsCell.m; sourceTree = "<group>"; };
+		9327AD66236D23CD004F8DA4 /* IntegralHomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegralHomeModel.m; sourceTree = "<group>"; };
+		9327AD67236D23CD004F8DA4 /* IntegralHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegralHomeModel.h; sourceTree = "<group>"; };
+		9327AD68236D23CD004F8DA4 /* IntegralBannerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegralBannerModel.h; sourceTree = "<group>"; };
+		9327AD69236D23CD004F8DA4 /* IntegralBannerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegralBannerModel.m; sourceTree = "<group>"; };
+		9327AD6D236D25DB004F8DA4 /* ShoppingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingViewController.m; sourceTree = "<group>"; };
+		9327AD6E236D25DB004F8DA4 /* ShoppingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingViewController.h; sourceTree = "<group>"; };
 		F503E9CA1D051A7B001CB721 /* NetWork+BodyAndCookie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NetWork+BodyAndCookie.h"; sourceTree = "<group>"; };
 		F503E9CB1D051A7B001CB721 /* NetWork+BodyAndCookie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetWork+BodyAndCookie.m"; sourceTree = "<group>"; };
 		F50C34671DAE51350059ED7F /* ShufflingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShufflingManager.h; sourceTree = "<group>"; };
@@ -2641,6 +2695,8 @@
 		377020B82265CF2D0003D532 /* other */ = {
 			isa = PBXGroup;
 			children = (
+				9327AD50236D2368004F8DA4 /* IntegralMall(积分商城) */,
+				9327AD34236D205C004F8DA4 /* Classification分类 */,
 				F5935DD11D011CB7008622D4 /* Home(首页) */,
 				39A980CF1D687A850095739C /* MineShop(我的店铺) */,
 				F5922B781D4AF08C005B2173 /* Seller(卖家) */,
@@ -4718,6 +4774,67 @@
 			path = "NSString+OrderStatus";
 			sourceTree = "<group>";
 		};
+		9327AD34236D205C004F8DA4 /* Classification分类 */ = {
+			isa = PBXGroup;
+			children = (
+				9327AD4A236D21AE004F8DA4 /* ClassficationHeadCollectionReusableView.h */,
+				9327AD4B236D21AE004F8DA4 /* ClassficationHeadCollectionReusableView.m */,
+				9327AD49236D21AE004F8DA4 /* ClassficationHeadCollectionReusableView.xib */,
+				9327AD44236D2179004F8DA4 /* ClassficationDetailCollectionViewCell.h */,
+				9327AD45236D2179004F8DA4 /* ClassficationDetailCollectionViewCell.m */,
+				9327AD46236D2179004F8DA4 /* ClassficationDetailCollectionViewCell.xib */,
+				9327AD41236D20C9004F8DA4 /* ClassficationLeftTableViewCell.h */,
+				9327AD40236D20C9004F8DA4 /* ClassficationLeftTableViewCell.m */,
+				9327AD3F236D20C9004F8DA4 /* ClassficationLeftTableViewCell.xib */,
+				9327AD3C236D20BA004F8DA4 /* ClassficationMenuTableViewCell.h */,
+				9327AD3A236D20BA004F8DA4 /* ClassficationMenuTableViewCell.m */,
+				9327AD3B236D20BA004F8DA4 /* ClassficationMenuTableViewCell.xib */,
+				9327AD37236D2088004F8DA4 /* ClassificationViewController.h */,
+				9327AD35236D2087004F8DA4 /* ClassificationViewController.m */,
+				9327AD36236D2087004F8DA4 /* ClassificationViewController.xib */,
+			);
+			path = "Classification分类";
+			sourceTree = "<group>";
+		};
+		9327AD50236D2368004F8DA4 /* IntegralMall(积分商城) */ = {
+			isa = PBXGroup;
+			children = (
+				9327AD68236D23CD004F8DA4 /* IntegralBannerModel.h */,
+				9327AD69236D23CD004F8DA4 /* IntegralBannerModel.m */,
+				9327AD67236D23CD004F8DA4 /* IntegralHomeModel.h */,
+				9327AD66236D23CD004F8DA4 /* IntegralHomeModel.m */,
+				9327AD56236D23AD004F8DA4 /* IntegralHomeView */,
+				9327AD53236D2380004F8DA4 /* IntegralMallHomeViewController.h */,
+				9327AD51236D2380004F8DA4 /* IntegralMallHomeViewController.m */,
+			);
+			path = "IntegralMall(积分商城)";
+			sourceTree = "<group>";
+		};
+		9327AD56236D23AD004F8DA4 /* IntegralHomeView */ = {
+			isa = PBXGroup;
+			children = (
+				9327AD5E236D23AD004F8DA4 /* IntegralHomeGoodsHorizontalCell.h */,
+				9327AD59236D23AD004F8DA4 /* IntegralHomeGoodsHorizontalCell.m */,
+				9327AD5A236D23AD004F8DA4 /* IntegralHomeGoodsHorizontalCell.xib */,
+				9327AD5B236D23AD004F8DA4 /* IntegralMallHeadView.h */,
+				9327AD5D236D23AD004F8DA4 /* IntegralMallHeadView.m */,
+				9327AD5C236D23AD004F8DA4 /* IntegralMallHeadView.xib */,
+				9327AD58236D23AD004F8DA4 /* IntegralHomeGoodsCell.h */,
+				9327AD5F236D23AD004F8DA4 /* IntegralHomeGoodsCell.m */,
+				9327AD57236D23AD004F8DA4 /* IntegralHomeGoodsCell.xib */,
+			);
+			path = IntegralHomeView;
+			sourceTree = "<group>";
+		};
+		9327AD6C236D25DB004F8DA4 /* ShoppingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9327AD6E236D25DB004F8DA4 /* ShoppingViewController.h */,
+				9327AD6D236D25DB004F8DA4 /* ShoppingViewController.m */,
+			);
+			path = ShoppingViewController;
+			sourceTree = "<group>";
+		};
 		C9CA4D6A271CD319C0AD732C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -5492,6 +5609,7 @@
 		F557E7991D17D18600AF482F /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
+				9327AD4E236D2314004F8DA4 /* ShoppingCart.storyboard */,
 				F557E79C1D17D18600AF482F /* Home.storyboard */,
 				F557E79D1D17D18600AF482F /* Login.storyboard */,
 				F557E79E1D17D18600AF482F /* Personal.storyboard */,
@@ -6314,6 +6432,7 @@
 		F5935DE61D011F8A008622D4 /* Shopping(购物) */ = {
 			isa = PBXGroup;
 			children = (
+				9327AD6C236D25DB004F8DA4 /* ShoppingViewController */,
 				F523B1C91D6D8F72002CF44E /* VCModel */,
 				F5935E1E1D013758008622D4 /* ShoppingView */,
 			);
@@ -7861,6 +7980,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9327AD60236D23AD004F8DA4 /* IntegralHomeGoodsCell.xib in Resources */,
 				F562E9EC1D3CE2D5009ACE79 /* ToPaymentViewController.xib in Resources */,
 				F53BB04B1D33899D00FE900D /* SettleMentTableViewCell.xib in Resources */,
 				F55BF76C1D8E9BEF00E8D907 /* PopSellerSendingView.xib in Resources */,
@@ -7941,6 +8061,7 @@
 				F5709F241D23789F00DA0778 /* HometableHeadView.xib in Resources */,
 				F5DB157F1D2B4D3000F6A6B8 /* GoodsEvaluationView.xib in Resources */,
 				F59A54291D41F41E00B259FA /* AllOrderTimeTableViewCell.xib in Resources */,
+				9327AD62236D23AD004F8DA4 /* IntegralHomeGoodsHorizontalCell.xib in Resources */,
 				F5B879981D06D61C000798E0 /* ShoppingCartTableViewCell.xib in Resources */,
 				F5709F221D23789F00DA0778 /* HomeHeadViewCollectionViewCell.xib in Resources */,
 				F5D42AEF1D35E69700BC2228 /* PayAttentionShopViewController.xib in Resources */,
@@ -7951,6 +8072,7 @@
 				F55610B61D3F4AC9005D3C48 /* OrderTableHeadView.xib in Resources */,
 				F550CA441D5819D000872F89 /* ShopTemplateCollectionViewCell.xib in Resources */,
 				F56CD3321D93774B00781EDC /* SellerRefusedRefundView.xib in Resources */,
+				9327AD3E236D20BA004F8DA4 /* ClassficationMenuTableViewCell.xib in Resources */,
 				F5931CBC1D239B5F00EA4168 /* SystemMessageViewController.xib in Resources */,
 				F562E9D31D3CDE1D009ACE79 /* AllOrdersViewController.xib in Resources */,
 				F5C6D8471D50A46A00847408 /* NoSuccessConstTableViewCell.xib in Resources */,
@@ -7961,10 +8083,13 @@
 				F55B66181D23C5140020580D /* StationMessageTableViewCell.xib in Resources */,
 				F5DF090B1D2E3C4300C2CBFD /* ClassGoodScreeningViewController.xib in Resources */,
 				F55B66061D23AB680020580D /* NotificationMessageTableViewCell.xib in Resources */,
+				9327AD63236D23AD004F8DA4 /* IntegralMallHeadView.xib in Resources */,
 				932298AF235F421600DAFAAA /* lantianqidongtu.png in Resources */,
+				9327AD42236D20CA004F8DA4 /* ClassficationLeftTableViewCell.xib in Resources */,
 				F56CD32C1D92979900781EDC /* PopSellerRefundView.xib in Resources */,
 				F54F5C871D2D1432007B3A2B /* PopShopCollectionViewCell.xib in Resources */,
 				F5D42AEA1D35E67B00BC2228 /* PayAttentionGoodsViewController.xib in Resources */,
+				9327AD39236D2088004F8DA4 /* ClassificationViewController.xib in Resources */,
 				F582BF641D52D0CF00E98986 /* EvaluationHeadView.xib in Resources */,
 				F59A542F1D41FD6000B259FA /* TableDefaultLogisticsTableViewCell.xib in Resources */,
 				F565B69B1D54844A00D1D9F8 /* SerachStoreTableViewCell.xib in Resources */,
@@ -7973,6 +8098,7 @@
 				F582BF711D52E70400E98986 /* EvalutionTableViewCell.xib in Resources */,
 				F58F424E1D5D73B600E8B031 /* BaseSearchViewController.xib in Resources */,
 				F562E9E71D3CE2C5009ACE79 /* ToEvaluationViewController.xib in Resources */,
+				9327AD4F236D2315004F8DA4 /* ShoppingCart.storyboard in Resources */,
 				F5709F1E1D23789F00DA0778 /* HomeClassTableViewCell.xib in Resources */,
 				F53C55601D2FB19600017CB3 /* EvaluationDetailsVCViewController.xib in Resources */,
 				F5DB15181D25000300F6A6B8 /* ClassGoodsVerticalCollectionViewCell.xib in Resources */,
@@ -8029,6 +8155,7 @@
 				F5E699A31D054F77007F0298 /* BaseView.xib in Resources */,
 				F536219F1D63FED1005B8034 /* HeadTableViewCell.xib in Resources */,
 				F5FD63B91D2F4EFD003C3A9A /* SearchStationViewController.xib in Resources */,
+				9327AD4C236D21AE004F8DA4 /* ClassficationHeadCollectionReusableView.xib in Resources */,
 				37B20FF220F72469006A3C04 /* FanLiListCell.xib in Resources */,
 				F53C55781D3332BC00017CB3 /* EvaluationDetailsTableViewCell.xib in Resources */,
 				F557E7A81D17D19D00AF482F /* LaunchScreen.storyboard in Resources */,
@@ -8036,6 +8163,7 @@
 				F5922B9A1D4F0121005B2173 /* LookDetialViewController.xib in Resources */,
 				F54F5C781D2CF72E007B3A2B /* PopShopView.xib in Resources */,
 				F53BB0331D3374DF00FE900D /* MyWalletPayTypeTableViewCell.xib in Resources */,
+				9327AD48236D217A004F8DA4 /* ClassficationDetailCollectionViewCell.xib in Resources */,
 				376483621D6C3B2200F22240 /* EditAddressNewViewController.xib in Resources */,
 				373194E120FF38B70078D142 /* HomeGoodsCollectionViewCell.xib in Resources */,
 				F54F5C821D2D10A6007B3A2B /* PopShopTableViewCell.xib in Resources */,
@@ -8574,6 +8702,7 @@
 				395347011D755CBF0055062F /* EvalutionDetialModel.m in Sources */,
 				372C02361FE3687800B5F683 /* UICollectionView+HD_NoList.m in Sources */,
 				399A05AC1D3387E9006E1598 /* RebateDetailsModel.m in Sources */,
+				9327AD3D236D20BA004F8DA4 /* ClassficationMenuTableViewCell.m in Sources */,
 				F5709F1F1D23789F00DA0778 /* HomeClassView.m in Sources */,
 				3940B5DF1D2F448400A9359E /* PopVerifyView.m in Sources */,
 				F5709F251D23789F00DA0778 /* HomeTableViewHeadView.m in Sources */,
@@ -8609,6 +8738,7 @@
 				395C920D1DC1E02F005E43BC /* NSString+HidePhone.m in Sources */,
 				39BB9A5F1D2E5A950026C7AD /* BindingPhoneViewController.m in Sources */,
 				F503E9CC1D051A7B001CB721 /* NetWork+BodyAndCookie.m in Sources */,
+				9327AD65236D23AD004F8DA4 /* IntegralHomeGoodsCell.m in Sources */,
 				3940B5DC1D2F448400A9359E /* MineIconView.m in Sources */,
 				F5935E341D015F06008622D4 /* UIImagePickerController+PublishMethods.m in Sources */,
 				37B20FF020F72469006A3C04 /* FanLiListCell.m in Sources */,
@@ -8683,6 +8813,7 @@
 				F5EBF5C61DAB73DF006D269D /* ShufflingInternalWebViewController.m in Sources */,
 				F54F5C621D2C9607007B3A2B /* GoodsView.m in Sources */,
 				F50FC59A1D3777B500EDDF7D /* HomeTableOtherHeadSectionView.m in Sources */,
+				9327AD4D236D21AE004F8DA4 /* ClassficationHeadCollectionReusableView.m in Sources */,
 				F53BB00C1D33477F00FE900D /* BuyAndSendCostTableViewCell.m in Sources */,
 				39AEA0611D34B13A00E80648 /* ComplaintCell.m in Sources */,
 				F5DB15961D2BA22A00F6A6B8 /* EvalutaionTypeContentAndImageTableViewCell.m in Sources */,
@@ -8701,6 +8832,7 @@
 				39AEA0671D34B13A00E80648 /* MinePropertyCell.m in Sources */,
 				376CFD9F1FF09351005D0D93 /* SelVipPriceTypeCell.m in Sources */,
 				39BE62291D3615F900FE1A16 /* LanguageView.m in Sources */,
+				9327AD38236D2088004F8DA4 /* ClassificationViewController.m in Sources */,
 				F5C6D8461D50A46A00847408 /* NoSuccessConstTableViewCell.m in Sources */,
 				3978FF561E53E8EC00FC4B04 /* AreaModel.m in Sources */,
 				F5922B991D4F0121005B2173 /* LookDetialViewController.m in Sources */,
@@ -8738,6 +8870,7 @@
 				3977E7681D3F3F2300BC7C16 /* OffPayPopView.m in Sources */,
 				398850291D339A66006AAA1D /* MinePointsViewController.m in Sources */,
 				F535816E1D45FDCE006CFC7B /* ShippingDetialsTableViewCell.m in Sources */,
+				9327AD6B236D23CE004F8DA4 /* IntegralBannerModel.m in Sources */,
 				39C719C01DB087DC00856DA6 /* NSString+ShopRefundWay.m in Sources */,
 				F53BB02A1D3372EA00FE900D /* MywalletViewController.m in Sources */,
 				370C84D81D53496A00891139 /* NSDate+TimeInterval.m in Sources */,
@@ -8763,6 +8896,7 @@
 				F598A55C1D18DC4B00E1D1F8 /* UIBarButtonItem+Badge.m in Sources */,
 				395C86251D8196F900FD1B91 /* ShowImagesView.m in Sources */,
 				39C43F931D46069500E9E00C /* DistributionDateView.m in Sources */,
+				9327AD6F236D25DB004F8DA4 /* ShoppingViewController.m in Sources */,
 				F56D6FB31D87A62D005F5163 /* ArefundFiledTableViewCell.m in Sources */,
 				39A981301D687A860095739C /* MineShopGoodsManagerViewModel.m in Sources */,
 				394A762D1D654E2100DDE2EF /* ComplaintDetailedViewModel.m in Sources */,
@@ -8793,6 +8927,7 @@
 				3984E8351D3C6D010004444C /* MineAccountPopView.m in Sources */,
 				3977E76C1D3F570A00BC7C16 /* ComplaintItemsView.m in Sources */,
 				3999BF331D47544100A5BA0B /* AccountRechargeViewController.m in Sources */,
+				9327AD61236D23AD004F8DA4 /* IntegralHomeGoodsHorizontalCell.m in Sources */,
 				F544B1D21E4AC2DF0052F775 /* NSDictionary+write.m in Sources */,
 				F5709F1D1D23789F00DA0778 /* HomeClassTableViewCell.m in Sources */,
 				378D13671FD64CFD0010C936 /* UIView+Frame.m in Sources */,
@@ -8827,6 +8962,7 @@
 				39A740F51D3F2954006F4083 /* BaseOrderPopView.m in Sources */,
 				F538D76B1DDC4C1A00F8DED2 /* GoodsHeadView.m in Sources */,
 				39A981311D687A860095739C /* MineShopRefundViewModel.m in Sources */,
+				9327AD47236D217A004F8DA4 /* ClassficationDetailCollectionViewCell.m in Sources */,
 				F53C556C1D332E5000017CB3 /* GoodsImageTableViewCell.m in Sources */,
 				F582BF4A1D51C87900E98986 /* PoprefundMoneyView.m in Sources */,
 				39BE623A1D36358B00FE1A16 /* VerifyPayInfoView.m in Sources */,
@@ -8842,6 +8978,7 @@
 				F54F5C711D2CED2F007B3A2B /* GoodDescriptionTableViewCell.m in Sources */,
 				F59A542E1D41FD6000B259FA /* TableDefaultLogisticsTableViewCell.m in Sources */,
 				37B20FE220F7215B006A3C04 /* ReferrerViewController.m in Sources */,
+				9327AD6A236D23CE004F8DA4 /* IntegralHomeModel.m in Sources */,
 				395858C01D3CDF5C00E961B9 /* CalendarDate.m in Sources */,
 				39A0D6701E52A699004B037D /* SelectAddressPickerView.m in Sources */,
 				F52BF0231D558B5300377E94 /* SearchCollectionViewCell.m in Sources */,
@@ -8882,6 +9019,7 @@
 				39BE62241D3615F900FE1A16 /* LineWordsView.m in Sources */,
 				375F374F1D5967E200049916 /* JZPhotoView.m in Sources */,
 				F565B68F1D5438F400D1D9F8 /* searchHeadView.m in Sources */,
+				9327AD43236D20CA004F8DA4 /* ClassficationLeftTableViewCell.m in Sources */,
 				376483611D6C3B2200F22240 /* EditAddressNewViewController.m in Sources */,
 				F536218B1D62F7AA005B8034 /* ClassGoodsSortViewController.m in Sources */,
 				F55B66051D23AB680020580D /* NotificationMessageTableViewCell.m in Sources */,
@@ -8927,6 +9065,7 @@
 				F5DB15061D24FC5800F6A6B8 /* ClassGoodsViewController.m in Sources */,
 				F5DF090A1D2E3C4300C2CBFD /* ClassGoodScreeningViewController.m in Sources */,
 				F53C55811D33389900017CB3 /* EvakuationHeadView.m in Sources */,
+				9327AD54236D2381004F8DA4 /* IntegralMallHomeViewController.m in Sources */,
 				F562E9E61D3CE2C5009ACE79 /* ToEvaluationViewController.m in Sources */,
 				399D110B1D2BB2A000A0C0A3 /* AddressManagerViewController.m in Sources */,
 				F5B879A71D07C3EE000798E0 /* GoodsDetialViewController.m in Sources */,
@@ -9003,6 +9142,7 @@
 				39A981431D687A860095739C /* MineShopAccountCell.m in Sources */,
 				39A981331D687A860095739C /* TransactionDetailsModel.m in Sources */,
 				F5F06A5A1E4C47CD006B0F49 /* AboutUsVCViewController.m in Sources */,
+				9327AD64236D23AD004F8DA4 /* IntegralMallHeadView.m in Sources */,
 				F53621931D63041E005B8034 /* ScreenDetialModel.m in Sources */,
 				39BE621A1D3615F900FE1A16 /* ChangePassWordViewController.m in Sources */,
 				F523B1DD1D6FDEDA002CF44E /* HomeModel.m in Sources */,

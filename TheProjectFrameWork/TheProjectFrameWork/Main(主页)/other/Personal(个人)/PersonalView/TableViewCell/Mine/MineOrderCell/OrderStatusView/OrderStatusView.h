@@ -24,7 +24,7 @@
 @end
 @interface OrderStatusView : UIView
 @property (nonatomic , weak) id <OrderStatusViewDelegate> delegate;
-
+@property (nonatomic, copy) NSString *countStr;
 @property (nonatomic , assign) NSInteger count;
 @property (nonatomic , copy) NSString * text;
 @property (nonatomic , strong) UIImage * image;

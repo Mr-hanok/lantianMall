@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ClassficationMenuTableViewCell" id="KGk-i7-Jjw" customClass="ClassficationMenuTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xts-3B-HPv">
+                        <rect key="frame" x="16" y="11" width="288" height="22"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVP-03-0W5">
+                        <rect key="frame" x="0.0" y="7" width="5" height="30"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="5" id="CWJ-0E-xx7"/>
+                            <constraint firstAttribute="height" constant="30" id="Fzq-Bm-yU1"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="xts-3B-HPv" secondAttribute="trailing" id="KhB-kD-ayb"/>
+                    <constraint firstItem="CVP-03-0W5" firstAttribute="centerY" secondItem="xts-3B-HPv" secondAttribute="centerY" id="LwB-SF-JrM"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="xts-3B-HPv" secondAttribute="bottom" id="OQK-Hu-p4r"/>
+                    <constraint firstItem="xts-3B-HPv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="haK-Lv-yl9"/>
+                    <constraint firstItem="CVP-03-0W5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="mre-I0-1iJ"/>
+                    <constraint firstItem="xts-3B-HPv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="w7t-5X-wV6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="markView" destination="CVP-03-0W5" id="iRI-2K-9E9"/>
+                <outlet property="menuContentLabel" destination="xts-3B-HPv" id="3Q3-b6-T2h"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

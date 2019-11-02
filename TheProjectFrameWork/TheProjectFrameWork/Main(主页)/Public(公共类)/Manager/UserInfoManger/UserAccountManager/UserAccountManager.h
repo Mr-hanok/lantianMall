@@ -89,4 +89,17 @@ typedef void (^getUserInfoBlock) (id error , BOOL successful);
 @property (nonatomic, assign) BOOL isShow;
 @property (nonatomic, strong) AdvertListModel *homeAdPopModel;
 
+
+/**待付款订单数量*/
+@property (nonatomic, copy) NSString *orderSubmitNum;
+/**待收货订单数量*/
+@property (nonatomic, copy) NSString *orderShippingNum;
+/**已收货订单数量*/
+@property (nonatomic, copy) NSString *orderReceiveNum;
+/**已取消订单数量*/
+@property (nonatomic, copy) NSString *orderCancelNum;
+/**已退款订单数量*/
+@property (nonatomic, copy) NSString *orderRefundNum;
+/**代发货*/
+@property (nonatomic, copy) NSString *paymentOrderNum;
 @end

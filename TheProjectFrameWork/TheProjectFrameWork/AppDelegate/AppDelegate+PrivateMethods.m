@@ -8,6 +8,7 @@
 
 #import "AppDelegate+PrivateMethods.h"
 #import "BaseWebViewController.h"
+#import "ClassificationViewController.h"
 
 @interface AppDelegate ()<UITabBarControllerDelegate>
 
@@ -26,38 +27,98 @@
     
     
 
-    BaseWebViewController * tempweb1 = [[BaseWebViewController alloc] init];
-    tempweb1.webUrl = [NSString stringWithFormat:@"%@%@",temprooturl,@"/phoneh5_zh/index.html"];
-    UINavigationController *tempnavi = [[UINavigationController alloc]initWithRootViewController:tempweb1];
+//    BaseWebViewController * tempweb1 = [[BaseWebViewController alloc] init];
+//    tempweb1.webUrl = [NSString stringWithFormat:@"%@%@",temprooturl,@"/phoneh5_zh/index.html"];
+//    UINavigationController *tempnavi = [[UINavigationController alloc]initWithRootViewController:tempweb1];
+//    self.window.rootViewController = tempnavi;
+//    [self.window makeKeyAndVisible];
+
     
-//    BaseWebViewController * tempweb2 = [[BaseWebViewController alloc] init];
-//    tempweb2.webUrl = [NSString stringWithFormat:@"%@%@",temprooturl,@"/phoneh5_zh/classificationl.html"];
-//    UINavigationController *tempnavi2 = [[UINavigationController alloc]initWithRootViewController:tempweb2];
-//
-//
-//    BaseWebViewController * tempweb3 = [[BaseWebViewController alloc] init];
-//    tempweb3.webUrl = [NSString stringWithFormat:@"%@%@",temprooturl,@"/phoneh5_zh/myIntegral.html"];
-//    UINavigationController *tempnavi3 = [[UINavigationController alloc]initWithRootViewController:tempweb3];
-//
-//    BaseWebViewController * tempweb4 = [[BaseWebViewController alloc] init];
-//    tempweb4.webUrl = [NSString stringWithFormat:@"%@%@",temprooturl,@"/phoneh5_zh/shopping_cars.html"];
-//    UINavigationController *tempnavi4 = [[UINavigationController alloc]initWithRootViewController:tempweb4];
-//
-//    BaseWebViewController * tempweb5 = [[BaseWebViewController alloc] init];
-//    tempweb5.webUrl = [NSString stringWithFormat:@"%@%@",temprooturl,@"/phoneh5_zh/aboutMe.html"];
-//    UINavigationController *tempnavi5 = [[UINavigationController alloc]initWithRootViewController:tempweb5];
-//
-//    // 设置tabBarController
-//    if ([[NSUserDefaults standardUserDefaults]boolForKey:@"integralStoreSwitch"]) {
-//        mTabBar.viewControllers = @[tempnavi,tempnavi2,tempnavi3,tempnavi4,tempnavi5];
-//
-//    }else{
-//        mTabBar.viewControllers = @[tempnavi,tempnavi2,tempnavi4,tempnavi5];
-//
-//    }
+    UITabBarController * mianTabBar = [[UITabBarController alloc] init];
+    // 首页
+    UIStoryboard * homeStoryBoard = [UIStoryboard storyboardWithName:@"Home" bundle:nil];
+    UINavigationController * homeNaV = [homeStoryBoard instantiateInitialViewController];
+    NSString * string =[LaguageControl languageWithString:@"首页"];
+    homeNaV.tabBarItem.title =string;
+    [LaguageControl shareControl].MainTarBar = homeNaV.tabBarItem;
+    homeNaV.tabBarItem.image = [UIImage imageNamed:@"shouye"];
+    homeNaV.tabBarItem.selectedImage = [UIImage imageNamed:@"shouye1"];
     
-    self.window.rootViewController = tempnavi;
+    
+    // 积分商城
+    UIStoryboard * integralMallStoryBoard = [UIStoryboard storyboardWithName:@"IntegralMall" bundle:nil];
+    UINavigationController * integralMallNaV = [integralMallStoryBoard instantiateInitialViewController];
+    [LaguageControl shareControl].IntegralMallTarBar = integralMallNaV.tabBarItem;
+
+    NSString * integralMallstring =[LaguageControl languageWithString:@"积分商城"];
+    integralMallNaV.tabBarItem.title = integralMallstring;
+    integralMallNaV.tabBarItem.image = [UIImage imageNamed:@"jficon-n"];
+    integralMallNaV.tabBarItem.selectedImage = [UIImage imageNamed:@"jficon-h"];
+    
+    
+    //购物车
+    UIStoryboard * shoppingCartStoryBoard = [UIStoryboard storyboardWithName:@"ShoppingCart" bundle:nil];
+    UINavigationController *shoppingCartNaV = [shoppingCartStoryBoard instantiateInitialViewController];
+    [LaguageControl shareControl].CattTarBar = shoppingCartNaV.tabBarItem;
+    NSString * shopstring =[LaguageControl languageWithString:@"购物车"];
+    shoppingCartNaV.tabBarItem.title = shopstring;
+    shoppingCartNaV.tabBarItem.image = [UIImage imageNamed:@"gouwuche"];
+    shoppingCartNaV.tabBarItem.selectedImage = [UIImage imageNamed:@"gouwuche1"];
+    
+    //个人
+    UIStoryboard * personalStoryBoard = [UIStoryboard storyboardWithName:@"Personal" bundle:nil];
+    UINavigationController * personalNaV = [personalStoryBoard instantiateInitialViewController];
+    [LaguageControl shareControl].PresonTarBar = personalNaV.tabBarItem;
+
+    NSString * personstring =[LaguageControl languageWithString:@"我的"];
+
+    personalNaV.tabBarItem.title = personstring;
+    personalNaV.tabBarItem.image = [UIImage imageNamed:@"wode"];
+    personalNaV.tabBarItem.selectedImage = [UIImage imageNamed:@"wode1"];
+    
+    /**分类*/
+       ClassificationViewController *classVc = [[ClassificationViewController alloc]init];
+       UINavigationController *classNavi =[[UINavigationController alloc]initWithRootViewController:classVc];
+       classNavi.title = @"分类";;
+       classNavi.navigationBar.translucent = NO;
+       classNavi.tabBarItem.image = [UIImage imageNamed:@"xinwen"];
+       classNavi.tabBarItem.selectedImage = [UIImage imageNamed:@"xinwen1"];
+    
+    
+    // 设置tabBarController
+    if ([[NSUserDefaults standardUserDefaults]boolForKey:@"integralStoreSwitch"]) {
+        mianTabBar.viewControllers = @[homeNaV,classNavi,integralMallNaV,shoppingCartNaV,personalNaV];
+
+    }else{
+        mianTabBar.viewControllers = @[homeNaV,classNavi,shoppingCartNaV,personalNaV];
+
+    }
+    
+    mianTabBar.delegate = self;
+    mianTabBar.tabBar.tintColor=kNavigationColor;
+    self.window.rootViewController = mianTabBar;
+    
+    
+    //字体大小，颜色（未被选中时）
+    [[UITabBarItem appearance]setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor lightGrayColor],NSForegroundColorAttributeName,[UIFont fontWithName:@"Helvetica"size:12.0f],NSFontAttributeName,nil]forState:UIControlStateNormal];
+    //字体大小，颜色（被选中时）
+    [[UITabBarItem appearance]setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kNavigationColor,NSForegroundColorAttributeName,[UIFont fontWithName:@"Helvetica"size:12.0f],NSFontAttributeName,nil]forState:UIControlStateSelected];
+    /**黑线颜色*/
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, -0.5, KSCREEN_WIDTH, 0.5)];
+    view.backgroundColor = [UIColor colorWithString:@"#f5f5f5"];
+    [[UITabBar appearance] insertSubview:view atIndex:0];
+    
+    //设置图片位置
+    UIEdgeInsets insets=UIEdgeInsetsMake(-3, 0, 3, 0);
+    personalNaV.tabBarItem.imageInsets = shoppingCartNaV.tabBarItem.imageInsets =   classNavi.tabBarItem.imageInsets = homeNaV.tabBarItem.imageInsets =integralMallNaV.tabBarItem.imageInsets= insets;
+    //设置文字位置
+    [[UITabBarItem appearance] setTitlePositionAdjustment:UIOffsetMake(0, -4)];
+    
+    
     [self.window makeKeyAndVisible];
+    
+    
+    
     return;
     
 

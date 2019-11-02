@@ -21,10 +21,19 @@
     if(self)
     {
         self.accessoryType = UITableViewCellAccessoryNone;
+        self.backgroundColor = [UIColor whiteColor];
+        self.contentView.backgroundColor = KSepLineColor;
+        [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.contentView.mas_left).offset(10);
+            make.right.equalTo(self.contentView.mas_right).offset(-10);
+            make.top.equalTo(self.contentView.mas_top);
+            make.bottom.equalTo(self.contentView.mas_bottom);
+        }];
+
         _textLabel = [[UILabel alloc] initWithText:nil];
         _textLabel.font = [UIFont systemFontOfSize:kAppAsiaFontSize(14)];
         _textLabel.textAlignment = NSTextAlignmentLeft;
-        _textLabel.textColor = [UIColor blackColor];
+        _textLabel.textColor = [UIColor darkGrayColor];
         _promptLabel = [[UILabel alloc] initWithText:nil];
         _promptLabel.font = _textLabel.font;
         _promptLabel.textColor = [UIColor lightGrayColor];
@@ -34,22 +43,22 @@
         [self.contentView addSubview:_textLabel];
         [self.contentView addSubview:_promptLabel];
         [self.contentView addSubview:_valueLabel];
-        __weak typeof(self) weakSelf = self;
+//        __weak typeof(self) weakSelf = self;
         void (^layoutBlcok)(MASConstraintMaker *make) = ^(MASConstraintMaker *make){
-            make.top.equalTo(weakSelf.contentView.mas_top).mas_offset(kScaleHeight(8));
-            make.bottom.equalTo(weakSelf.contentView.mas_bottom).mas_offset(-kScaleHeight(8));
+            make.top.equalTo(self.contentView.mas_top).mas_offset(kScaleHeight(8));
+            make.bottom.equalTo(self.contentView.mas_bottom).mas_offset(-kScaleHeight(8));
         };
         [_textLabel mas_makeConstraints:^(MASConstraintMaker *make) {
            layoutBlcok(make);
-            make.left.equalTo(weakSelf.contentView.mas_left).mas_offset(kScaleWidth(8));
+            make.left.equalTo(self.contentView.mas_left).mas_offset(kScaleWidth(8));
         }];
         [_promptLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             layoutBlcok(make);
-            make.right.equalTo(weakSelf.contentView.mas_right).mas_offset(-kScaleWidth(10));
+            make.right.equalTo(self.contentView.mas_right).mas_offset(-kScaleWidth(10));
         }];
         [_valueLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             layoutBlcok(make);
-            make.right.equalTo(weakSelf.contentView.mas_right).mas_offset(-kScaleWidth(10));
+            make.right.equalTo(self.contentView.mas_right).mas_offset(-kScaleWidth(10));
         }];
     }
     return self;
