@@ -86,6 +86,7 @@
 - (void)setup
 {
     UIImageView * back = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"minebeijing"]];
+    back.backgroundColor = kNavigationColor;
     [self addSubview:back];
     [self addSubview:_iconImage];
     [self addSubview:_assistView];

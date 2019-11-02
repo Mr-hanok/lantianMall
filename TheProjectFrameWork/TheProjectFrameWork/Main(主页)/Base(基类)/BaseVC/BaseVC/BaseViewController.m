@@ -19,6 +19,7 @@
 #import "LoginViewController.h"
 #import <UIButton+WebCache.h>
 @interface BaseViewController ()<UISearchBarDelegate>
+@property (nonatomic, strong) UIView *NAVfootView;
 
 @end
 
@@ -28,7 +29,7 @@
 {
     
     [super viewDidLoad];
-
+    
     [self.navigationBarView SetIamgeView];
     self.currentPage = 1;
     self.backview.backgroundColor = [UIColor clearColor];
@@ -68,11 +69,11 @@
 }
 
 -(void)updateHeadView{
-
+    
 }
 -(void)updateFootView
 {
-
+    
 }
 -(void)endRefresh
 {
@@ -92,34 +93,47 @@
      *  统一背景颜色
      */
     self.view.backgroundColor = [UIColor colorWithString:@"#F3F5F7"];
-
+    
     UIColor * color = kIsChiHuoApp ? [UIColor colorWithRed:55/255.0 green:55/255.0 blue:55/255.0 alpha:1.f]:[UIColor whiteColor];
     //这里我们设置的是颜色，还可以设置shadow等，具体可以参见api
     NSDictionary * dict = [NSDictionary dictionaryWithObject:color forKey:NSForegroundColorAttributeName];
     //大功告成
     self.navigationController.navigationBar.titleTextAttributes = dict;
     
-//    [self.navigationController.navigationBar lt_setBackgroundColor:[[UIColor colorWithString:@"#c90c1e"] colorWithAlphaComponent:1] showShowImage:nil];
+    //    [self.navigationController.navigationBar lt_setBackgroundColor:[[UIColor colorWithString:@"#c90c1e"] colorWithAlphaComponent:1] showShowImage:nil];
     if (kIsChiHuoApp) {
         self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:246/255.0 green:246/255.0 blue:246/255.0 alpha:1.f];
-//        [self setStatusBarBackgroundColor:[UIColor colorWithRed:246/255.0 green:246/255.0 blue:246/255.0 alpha:1.f]];
+        //        [self setStatusBarBackgroundColor:[UIColor colorWithRed:246/255.0 green:246/255.0 blue:246/255.0 alpha:1.f]];
         /**去导航黑线*/
         [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc]init] forBarMetrics:UIBarMetricsDefault];
         [self.navigationController.navigationBar setShadowImage:[[UIImage alloc]init]];
         self.navigationController.navigationBar.translucent = NO;
         
     }else{
-            self.automaticallyAdjustsScrollViewInsets = NO;
-            self.edgesForExtendedLayout = UIRectEdgeNone;
-            self.navigationController.navigationBar.barTintColor = kNavigationColor;
-            [self.navigationBarView SetIamgeView];
+        /**去导航黑线*/
+        for (UIView *view in self.navigationController.navigationBar.subviews) {
+            //去除系统导航栏分割线
+            if (CGRectGetHeight([view frame]) <= 1) {
+                view.hidden = YES;
+            }
+        }
+        self.NAVfootView = [[UIView alloc] initWithFrame:CGRectMake(0, 44, KSCREEN_WIDTH, 0.5)];
+        //添加自定义分割线
+        self.NAVfootView.backgroundColor = kNavigationColor;
+        [self.navigationController.navigationBar addSubview:self.NAVfootView];
+        [self.navigationController.navigationBar bringSubviewToFront:self.NAVfootView];
+        
+        self.automaticallyAdjustsScrollViewInsets = NO;
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+        self.navigationController.navigationBar.barTintColor = kNavigationColor;
+        
     }
     [UIApplication sharedApplication].statusBarStyle=  kIsChiHuoApp ? UIStatusBarStyleDefault: UIStatusBarStyleLightContent;
-
+    
     [self BaseLoadView];
     self.view.backgroundColor = [UIColor whiteColor];
-
-    }
+    
+}
 /**
  
  *  设置navigationBar
@@ -131,7 +145,7 @@
     }
     self.navigationBarView.frame = CGRectMake(0, 0, kIsChiHuoApp ? 32 : 80, 32);
     self.navigationBarView.backgroundColor = [UIColor colorWithWhite:0.1 alpha:0];
-
+    
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.navigationBarView];
 }
@@ -160,8 +174,8 @@
 /** 加载navigationBar点击事件 */
 -(void)loadLeftnavigabarTouchEvent{
     [self.navigationBarView.leftButton setImage:[UIImage imageNamed: kIsChiHuoApp ? @"back_bt_7" : @"back_bt_7"] forState:UIControlStateNormal];
-//    [self.navigationBarView.leftButton.imageView setContentMode:UIViewContentModeScaleAspectFill];
-
+    //    [self.navigationBarView.leftButton.imageView setContentMode:UIViewContentModeScaleAspectFill];
+    
     [self.navigationBarView.leftButton addTarget:self action:@selector(backToPresentViewController) forControlEvents:UIControlEventTouchUpInside];
 }
 -(void)setBackBtn {
@@ -204,7 +218,7 @@
 }
 #pragma mark --UISearchBarDelegate
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
-
+    
     return NO;
 }
 
@@ -220,7 +234,7 @@
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text;
 {
-
+    
     if (textView.textInputMode.primaryLanguage == NULL ||[textView.textInputMode.primaryLanguage isEqualToString:@"emoji"]) {
         return NO;
     }
@@ -317,7 +331,7 @@
     }
     
     UIBarButtonItem *leftbtnitem = [[UIBarButtonItem alloc] initWithCustomView:btn];
-
+    
     if (self.tabBarController == nil) {
         self.navigationItem.leftBarButtonItem = leftbtnitem;
     } else {
@@ -338,7 +352,7 @@
     view.image = [UIImage imageNamed:@"fangdajing"];
     view.frame = CGRectMake(0, 0, 35, 35);
     view.contentMode = UIViewContentModeCenter;
-//    text.backgroundColor = [UIColor whiteColor];
+    //    text.backgroundColor = [UIColor whiteColor];
     text.leftView = view;
     text.leftViewMode = UITextFieldViewModeAlways;
     text.layer.cornerRadius = 15.f;
